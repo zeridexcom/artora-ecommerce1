@@ -1,4 +1,6 @@
-# Artora E-commerce Platform
+# Artora E-commerce Platform 🚀
+
+> **Live Demo:** [Coming Soon](https://artora-ecommerce1.vercel.app)
 
 A full-stack e-commerce platform for framed artwork, built with Next.js and Node.js, featuring the beautiful Artora Shopify theme design.
 
