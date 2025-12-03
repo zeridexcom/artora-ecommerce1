@@ -1,0 +1,140 @@
+
+
+<div class='banner-v15'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <div class='banner-v15-inner'>
+        <xo-video-cover class='banner-v15__video' loop xo-autoplay='true' xo-src='{{ section.settings.video_url }}'></xo-video-cover>
+        <div class='banner-v15-inner__content'>
+          <a href='{{ section.settings.url }}' class='banner-v15-inner__heading'>{{ section.settings.heading }}</a>
+          <svg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M18 12L13 7M18 12L13 17" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+          </svg>
+        </div>
+      </div>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v15.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "textarea",
+      "id": "video_url",
+      "label": "t:sections.banner_v15.settings.video_url.label"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.banner_v15.settings.heading.label",
+      "default": "Heading"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:sections.banner_v15.settings.url.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v15.presets.name"
+    }
+  ]
+}
+{% endschema %}

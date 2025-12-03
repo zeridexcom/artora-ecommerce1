@@ -1,0 +1,221 @@
+
+
+<section {% render 'section-attr' %}>
+  <div class='faq-v1' style='background: {{section.settings.faq_bg }}'>
+    <xo-container {% render 'section-layout' %}>
+      <xo-grid>
+        <div
+          style='
+                {% if section.settings.reverse_layout %}
+              --xs: 12; --order-xs: 2; --md: 12; --order-sm: 2; --lg: 6; --order-lg: 2;
+            {% else %}
+              --xs: 12; --order-xs: 2; --md: 12; --order-sm: 1; --lg: 6;
+                  {% endif %}
+          '
+        >
+          <div class='faq-v1-left'>
+            {%- render 'image', image: section.settings.faq_img -%}
+          </div>
+        </div>
+
+        <div
+          style='
+              {% if section.settings.reverse_layout %}
+              --xs: 12; --order-xs: 2;--md: 12; --order-sm: 1; --lg: 6;
+              {% else %}
+              --xs: 12; --order-xs: 1;--md: 12; --order-sm: 2; --lg: 6;
+            {% endif %}
+          '
+        >
+          <div class='faq-v1-right'>
+            <div class='faq-v1-right__heading'>
+              {%- if section.settings.sub != blank -%}
+                <div class='faq-v1-right__sub'>{{ section.settings.sub }}</div>
+              {%- endif -%}
+              {%- if section.settings.heading -%}
+                <h2 class='faq-v1-right__title'>{{ section.settings.heading }}</h2>
+              {%- endif -%}
+            </div>
+
+            <div class='faq-v1-right__provider xo-scrollbar'>
+              <xo-collapse-provider xo-duration='300'>
+                {%- for block in section.blocks -%}
+                  <div class='faq-v1-right__row'>
+                    {%- if block.settings.question != blank -%}
+                      <xo-collapse-trigger class='faq-v1-right__trigger'>
+                        <div class='faq-v1-right__question'>{{ block.settings.question }}</div>
+                        <div class='faq-v1-right__plus'>
+                          {%- render 'icon', name: 'plus2', icon_size: '15', color: 'rgba(var(--color-foreground))' -%}
+                        </div>
+                      </xo-collapse-trigger>
+                    {%- endif -%}
+                    {%- if block.settings.anwser != blank and block.settings.question != blank -%}
+                      <xo-collapse>
+                        <div class='faq-v1-right__anwser'>{{ block.settings.anwser }}</div>
+                      </xo-collapse>
+                    {%- endif -%}
+                  </div>
+                {%- endfor -%}
+              </xo-collapse-provider>
+            </div>
+          </div>
+        </div>
+      </xo-grid>
+    </xo-container>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "t:sections.faq_v2.name",
+  "tag": "section",
+  "class": "section",
+  "blocks": [
+    {
+      "type": "question",
+      "name": "t:sections.faq_v2.blocks.question.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "t:sections.faq_v2.blocks.question.settings.title.label",
+          "default": "t:sections.faq_v2.blocks.question.settings.title.default"
+        },
+        {
+          "type": "richtext",
+          "id": "anwser",
+          "label": "t:sections.faq_v2.blocks.question.settings.content.label",
+          "default": "t:sections.faq_v2.blocks.question.settings.content.default"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.faq_v2.settings.content.label"
+    },
+    {
+      "type": "checkbox",
+      "id": "reverse_layout",
+      "label": "t:sections.faq_v2.settings.reverse_layout.label",
+      "default": false
+    },
+    {
+      "type": "image_picker",
+      "id": "faq_img",
+      "label": "t:sections.faq_v2.settings.faq_img.label",
+      "info": "Support jpg, jpeg, png, svg"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "label": "t:sections.faq_v2.settings.sub.label",
+      "default": "faqs"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "t:sections.faq_v2.settings.heading.label",
+      "default": "Hello new you <br> Beauty",
+      "info": "Enter <br> for a line break"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.faq_v2.presets.name"
+    }
+  ]
+}
+{% endschema %}

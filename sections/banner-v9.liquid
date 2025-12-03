@@ -1,0 +1,124 @@
+
+
+<div class='banner-v9'>
+  <div {% render 'section-attr' %}>
+    <div class='banner-v9-inner'>
+      <xo-video-cover class='banner-v9__video' loop xo-autoplay='true' xo-src='{{ section.settings.video_url }}'></xo-video-cover>
+      <div class='banner-v9__counter'>
+        <div class='banner-v9__counter--number'>0</div>
+      </div>
+      <div class='banner-v9__content'>
+        <a href='{{ section.settings.url1 }}' class='banner-v9__text1'>{{ section.settings.text1 }}</a>
+        <a href='{{ section.settings.url2 }}' class='banner-v9__text2'>{{ section.settings.text2 }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v9.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "video_url",
+      "label": "t:sections.banner_v9.settings.video_url.label"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "t:sections.banner_v9.settings.text1.label",
+      "default": "See creativity come to life."
+    },
+    {
+      "type": "url",
+      "id": "url1",
+      "label": "t:sections.banner_v9.settings.url1.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "t:sections.banner_v9.settings.text2.label",
+      "default": "Inspiration, captured on film."
+    },
+    {
+      "type": "url",
+      "id": "url2",
+      "label": "t:sections.banner_v9.settings.url2.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v9.presets.name"
+    }
+  ]
+}
+{% endschema %}

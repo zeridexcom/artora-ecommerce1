@@ -1,0 +1,177 @@
+{
+  "sections": {
+    "banner-v2": {
+      "type": "banner-v2",
+      "settings": {
+        "width": "box",
+        "text1": "Discover Unique Art for Every",
+        "text2": "Space",
+        "video": "https://cdn.shopify.com/videos/c/o/v/df4572923b2547188fc95712d497ecd3.mp4",
+        "text3": "Our art store offers a curated mix of bold, calm, and vivid works that bring soul to every corner. Each creation is born from raw ideas, full of color and emotion, ready to add meaning, energy, and style to your room, studio, or gallery-like home. Every artwork you find here tells a tale. We gather rare and honest works by makers who value true craft.",
+        "button_text": "ALL PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button_mode": "dark",
+        "button_style": "secondary",
+        "button_size": "sm",
+        "button_radius": 0,
+        "button_padding": 1.4,
+        "color_scheme": "",
+        "background_color": "#dbd7cc",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "collection-v1": {
+      "type": "collection-v1",
+      "blocks": {
+        "block_j46xAH": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_1.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_kjj6KR": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_2.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_GG43df": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_3.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_kYbYtV": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_4.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_BQaTTa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_5.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_nbh7NB": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_6.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_wy68VH": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_7.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_Y93hwT": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_8.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_Y93hw3T": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_9.jpg",
+            "url": "shopify://collections/all"
+          }
+        },
+        "block_Y93hw4T": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/cltv1_10.jpg",
+            "url": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "block_j46xAH",
+        "block_kjj6KR",
+        "block_GG43df",
+        "block_kYbYtV",
+        "block_BQaTTa",
+        "block_nbh7NB",
+        "block_wy68VH",
+        "block_Y93hwT",
+        "block_Y93hw3T",
+        "block_Y93hw4T"
+      ],
+      "settings": {
+        "width": "fullwidth",
+        "spacing": 15,
+        "color_scheme": "",
+        "background_color": "#dbd7cc",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v3": {
+      "type": "banner-v3",
+      "settings": {
+        "width": "box",
+        "sub": "Curated art to inspire every corner of your life.",
+        "title": "Canvas of Dreams",
+        "image1": "shopify://shop_images/Group_33.png",
+        "image2": "shopify://shop_images/Group_32.png",
+        "text": "Whispers of Light",
+        "image3": "shopify://shop_images/Group_31.png",
+        "color_scheme": "",
+        "background_color": "#dbd7cc",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "product_v1_jnjzmC": {
+      "type": "product-v1",
+      "settings": {
+        "width": "wide",
+        "subtitle": "",
+        "title": "Shop Everything",
+        "collection": "pagination-page",
+        "limit": 12,
+        "columns_size": 4,
+        "distinct_color_scheme": false,
+        "product_card_color_scheme": "",
+        "color_scheme": "",
+        "background_color": "#dbd7cc",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "instagram_v1_LckAUN": {
+      "type": "instagram-v1",
+      "settings": {
+        "width": "fullwidth",
+        "icon_heading": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"70\" height=\"70\" viewbox=\"0 0 50 50\" fill=\"none\">\n  <g clip-path=\"url(#clip0_11_25)\">\n    <path d=\"M34.375 0H15.625C6.99687 0 0 6.99687 0 15.625V34.375C0 43.0031 6.99687 50 15.625 50H34.375C43.0031 50 50 43.0031 50 34.375V15.625C50 6.99687 43.0031 0 34.375 0ZM45.3125 34.375C45.3125 40.4062 40.4062 45.3125 34.375 45.3125H15.625C9.59375 45.3125 4.6875 40.4062 4.6875 34.375V15.625C4.6875 9.59375 9.59375 4.6875 15.625 4.6875H34.375C40.4062 4.6875 45.3125 9.59375 45.3125 15.625V34.375Z\" fill=\"url(#paint0_linear_11_25)\"></path>\n    <path d=\"M25 12.5C18.0969 12.5 12.5 18.0969 12.5 25C12.5 31.9031 18.0969 37.5 25 37.5C31.9031 37.5 37.5 31.9031 37.5 25C37.5 18.0969 31.9031 12.5 25 12.5ZM25 32.8125C20.6937 32.8125 17.1875 29.3063 17.1875 25C17.1875 20.6906 20.6937 17.1875 25 17.1875C29.3063 17.1875 32.8125 20.6906 32.8125 25C32.8125 29.3063 29.3063 32.8125 25 32.8125Z\" fill=\"url(#paint1_linear_11_25)\"></path>\n    <path d=\"M38.4375 13.2281C39.3574 13.2281 40.1031 12.4824 40.1031 11.5625C40.1031 10.6426 39.3574 9.89685 38.4375 9.89685C37.5176 9.89685 36.7719 10.6426 36.7719 11.5625C36.7719 12.4824 37.5176 13.2281 38.4375 13.2281Z\" fill=\"url(#paint2_linear_11_25)\"></path>\n  </g>\n  <defs>\n    <lineargradient id=\"paint0_linear_11_25\" x1=\"4.57703\" y1=\"45.4233\" x2=\"45.423\" y2=\"4.57672\" gradientunits=\"userSpaceOnUse\">\n      <stop stop-color=\"#FFC107\"></stop>\n      <stop offset=\"0.507\" stop-color=\"#F44336\"></stop>\n      <stop offset=\"0.99\" stop-color=\"#9C27B0\"></stop>\n    </lineargradient>\n    <lineargradient id=\"paint1_linear_11_25\" x1=\"16.1614\" y1=\"33.8386\" x2=\"33.8386\" y2=\"16.1614\" gradientunits=\"userSpaceOnUse\">\n      <stop stop-color=\"#FFC107\"></stop>\n      <stop offset=\"0.507\" stop-color=\"#F44336\"></stop>\n      <stop offset=\"0.99\" stop-color=\"#9C27B0\"></stop>\n    </lineargradient>\n    <lineargradient id=\"paint2_linear_11_25\" x1=\"37.2598\" y1=\"12.7404\" x2=\"39.6152\" y2=\"10.3848\" gradientunits=\"userSpaceOnUse\">\n      <stop stop-color=\"#FFC107\"></stop>\n      <stop offset=\"0.507\" stop-color=\"#F44336\"></stop>\n      <stop offset=\"0.99\" stop-color=\"#9C27B0\"></stop>\n    </lineargradient>\n    <clippath id=\"clip0_11_25\">\n      <rect width=\"50\" height=\"50\" fill=\"white\"></rect>\n    </clippath>\n  </defs>\n</svg>",
+        "icon_image": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z\"></path></svg>",
+        "title": "Follow us on instagram",
+        "access_token": "",
+        "open_mode": "newtab",
+        "limit": 6,
+        "auto_play": false,
+        "color_scheme": "",
+        "background_color": "#dbd7cc",
+        "background_gradient": "",
+        "padding_top": 80,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": ["banner-v2", "collection-v1", "banner-v3", "product_v1_jnjzmC", "instagram_v1_LckAUN"]
+}

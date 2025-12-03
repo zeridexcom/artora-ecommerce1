@@ -1,0 +1,497 @@
+
+
+{% comment %} Add padding bottom for toolbar mobile {% endcomment %}
+{% if template != 'product' %}
+  {% assign pb_mobile = '--pb-mobile: 53px' %}
+{% else %}
+  {% assign pb_mobile = '' %}
+{% endif %}
+
+<footer {% render 'section-attr', style: pb_mobile %}>
+  {%- if section.blocks.size > 0 or section.settings.newsletter_enable or section.settings.show_social and has_social_icons == true or section.settings.enable_follow_on_shop -%}
+    {%- unless only_empty_brand -%}
+      <div class='footer-v21__content-top'>
+        <xo-container {% render 'section-layout' %}>
+          <xo-grid>
+            {% for block in section.blocks %}
+              {% if block.type == 'logo' %}
+                <div class='footer-v21__grid' style='--xs: 12; --sm: 12; --md:6; --lg: 3'>
+                  <div class='footer-v21__block'>
+                    {%- case block.type -%}
+                        {% assign col = 0 %}
+                      {%- when 'logo' -%}
+                        <div class='footer-v21__block-logo'>
+                          <div class='footer-v21__block-logo-phone'>
+                            {% if block.settings.image != blank %}
+                              {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                              <div
+                                class='footer-v21__block-logo-image'
+                                style='max-width: min(100%, {{ block.settings.image_width }}px);'
+                              >
+                                {% render 'image', image: block.settings.image %}
+                              </div>
+                            {% endif %}
+                          </div>
+                          <div class='footer-v21__block-text'>
+                            {{ block.settings.info }}
+                          </div>
+                          <div class='footer-v21__block-info'>
+                            Address: <span>{{ block.settings.address }}</span>
+                          </div>
+                          <div class='footer-v21__block-info'>
+                            Phone: <span>{{ block.settings.phone }}</span>
+                          </div>
+                          <div class='footer-v21__block-info'>
+                            Email: <span>{{ block.settings.email }}</span>
+                          </div>
+                        </div>
+                    {%- endcase -%}
+                  </div>
+                </div>
+              {% elsif block.type == 'instagram' %}
+                <div class='footer-v21__grid' style='--xs: 12; --sm: 12; --md:6 ;--lg: 3'>
+                  <div class='footer-v21__block'>
+                    {%- if block.settings.heading != blank -%}
+                      <h2 class='footer-v21__block-heading'>{{- block.settings.heading -}}</h2>
+                    {%- endif -%}
+                    <xo-grid style='--xs:3; --xo-grid-col-gap: 1.4rem; --xo-grid-row-gap: 1.4rem;'>
+                      {% if block.settings.instagram_img1 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram1}}'
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img1 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                      {% if block.settings.instagram_img2 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram2}}'
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img2 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                      {% if block.settings.instagram_img3 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram3}}'
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img3 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                      {% if block.settings.instagram_img4 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram4}}'
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img4 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                      {% if block.settings.instagram_img5 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram5}}'
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img5 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                      {% if block.settings.instagram_img6 != blank %}
+                        <a
+                          href='{{block.settings.link_instagram6   }}'
+                          {%- if block.settings.link_instagram6 != '#' and block.settings.link_instagram6 != blank -%}
+                            target='_blank'
+                          {%- endif -%}
+                          class='footer-v21__block-instagram-image'
+                        >
+                          <div>
+                            {% render 'image', image: block.settings.instagram_img6 %}
+                          </div>
+                        </a>
+                      {% endif %}
+                    </xo-grid>
+                    {%- if block.settings.show_social -%}
+                      <xo-animate xo-cascade>
+                        <ul role='list' class='footer-v21__social'>
+                          {%- if block.settings.icon_link1 != blank and block.settings.item_icon1 != blank -%}
+                            <li>
+                              <a href='{{block.settings.icon_link1}}' class='footer-v21__social-link' target='_blank'>{{ block.settings.item_icon1 }}</a>
+                            </li>
+                          {%- endif -%}
+
+                          {%- if block.settings.icon_link2 != blank and block.settings.item_icon2 != blank -%}
+                            <li>
+                              <a href='{{block.settings.icon_link2}}' class='footer-v21__social-link' target='_blank'>{{ block.settings.item_icon2 }}</a>
+                            </li>
+                          {%- endif -%}
+
+                          {%- if block.settings.icon_link3 != blank and block.settings.item_icon3 != blank -%}
+                            <li>
+                              <a href='{{block.settings.icon_link3}}' class='footer-v21__social-link' target='_blank'>{{ block.settings.item_icon3 }}</a>
+                            </li>
+                          {%- endif -%}
+
+                          {%- if block.settings.icon_link4 != blank and block.settings.item_icon4 != blank -%}
+                            <li>
+                              <a href='{{block.settings.icon_link4}}' class='footer-v21__social-link' target='_blank'>{{ block.settings.item_icon4 }}</a>
+                            </li>
+                          {%- endif -%}
+                        </ul>
+                      </xo-animate>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {% else %}
+                <div class='footer-v21__grid' style='--xs: 12; --sm: 12; --md:6;--lg: 3'>
+                  <div class='footer-v21__block'>
+                    {%- if block.settings.heading != blank -%}
+                      <h2 class='footer-v21__block-heading'>{{- block.settings.heading -}}</h2>
+                    {%- endif -%}
+                    {%- case block.type -%}
+                        {% assign col = 0 %}
+                      {%- when 'link_list' -%}
+                        {%- if block.settings.menu != blank -%}
+                          <ul role='list' class='footer-v21__block-list'>
+                            {%- for link in block.settings.menu.links -%}
+                              <li class='footer-v21__block-list-item'>
+                                <a
+                                  href='{{ link.url }}'
+                                >
+                                  {{ link.title }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                    {%- endcase -%}
+                  </div>
+                </div>
+              {% endif %}
+            {% endfor %}
+          </xo-grid>
+        </xo-container>
+      </div>
+    {%- endunless -%}
+  {%- endif -%}
+
+  {% comment %} content bottom cua theme {% endcomment %}
+  <xo-container {% render 'section-layout' %}>
+    <div class='footer-v21__content-bottom'>
+      <xo-grid class='footer-v21__bottom'>
+        <div class='footer-v21__copyright' style='--xs: 12; --md: 6; --lg: 6;'>
+          {% if section.settings.copyright != blank %}
+            {{- section.settings.copyright -}}
+          {% else %}
+            <small class='footer-v21__copyright-content'>&copy; Copyright {{ 'now' | date: '%Y' }} | {{ shop.name | link_to: routes.root_url -}}</small>
+            <small class='footer-v21__copyright-content'> By <a class='footer-v21__copyright-shopilaunch' href='https://shopilaunch.com/'> ShopiLaunch.</a> </small>
+            <small class='footer-v21__copyright-content footer-v21__copyright-content--black'>{{ powered_by_link }}.</small>
+          {% endif %}
+        </div>
+        <div class='footer-v21__copyright-payment' style='--xs: 12; --md: 6; --lg: 6;'>
+          {%- if section.settings.image_payment != blank -%}
+            {% render 'image', image: section.settings.image_payment %}
+          {%- endif -%}
+        </div>
+      </xo-grid>
+    </div>
+  </xo-container>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer_v3.name",
+  "class": "section-footer",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer_v3.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "t:sections.footer_v3.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer_v3.blocks.link_list.settings.menu.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer_v3.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer_v3.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "t:sections.footer_v3.blocks.text.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "t:sections.footer_v3.blocks.logo.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.footer_v3.blocks.logo.settings.image.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "info",
+          "default": "Lorem ipsum dolor sit amet, con",
+          "label": "t:sections.footer_v3.blocks.logo.settings.info.label"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "default": "Praesent nec nisl a purus blandit viverra. Pellentesque habitant morbi tristique senectuse.",
+          "label": "t:sections.footer_v3.blocks.logo.settings.address.label"
+        },
+        {
+          "type": "text",
+          "id": "phone",
+          "default": "(+01) 234-567-89",
+          "label": "t:sections.footer_v3.blocks.logo.settings.phone.label"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "default": "support@mycompany.com",
+          "label": "t:sections.footer_v3.blocks.logo.settings.email.label"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "t:sections.footer_v3.blocks.logo.settings.image_width.label",
+          "default": 80
+        }
+      ]
+    },
+    {
+      "type": "instagram",
+      "name": "t:sections.footer_v3.blocks.instagram.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer_v3.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img1",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img1.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram1",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram1.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img2",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img2.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram2",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram2.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img3",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img3.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram3",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram3.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img4",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img4.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram4",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram4.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img5",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img5.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram5",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram5.label"
+        },
+        {
+          "type": "image_picker",
+          "id": "instagram_img6",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.instagram_img6.label",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "text",
+          "id": "link_instagram6",
+          "default": "#",
+          "label": "t:sections.footer_v3.blocks.instagram.settings.link_instagram6.label"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "liquid",
+      "id": "copyright",
+      "label": "t:sections.footer_v3.settings.copyright.label",
+      "default": " © Copyright {{ 'now' | date: '%Y' }} | <a href='http://artora-store-newdemo.myshopify.com' rel='nofollow' target='_blank' class='footer-v21__theme-name'>Artora</a> By <a href='https://shopilaunch.com/' rel='nofollow' target='_blank' class='footer-v21__shop-name'> ShopiLaunch.</a><a href='https://shopify.pxf.io/9gPaY0' rel='nofollow' target='_blank' class='footer-v21__powered-shopify'> Powered by Shopify.</a>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_payment",
+      "label": "t:sections.footer_v3.settings.image_payment.label",
+      "info": "Support jpg, jpeg, png, svg"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,161 @@
+
+
+<div class='banner-v12'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <xo-grid class='banner-v12__grid'>
+        <div style='--xs: 12; --md: 4;' class='banner-v12__col'>
+          <div class='banner-v12__line'></div>
+          <a href='{{ section.settings.url }}' class='banner-v12__img'>
+            {%- render 'image', image: section.settings.image -%}
+          </a>
+          <div class='banner-v12__text1'>{{ section.settings.text1 }}</div>
+        </div>
+        <div style='--xs: 12; --md: 8;' class='banner-v12__col'>
+          <div class='banner-v12__line'></div>
+          <div class='banner-v12__right'>
+            <div class='banner-v12__text2'>{{ section.settings.text2 }}</div>
+            <div class='banner-v12__text3'>{{ section.settings.text3 }}</div>
+          </div>
+        </div>
+      </xo-grid>
+    </xo-container>
+  </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "t:sections.banner_v12.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.banner_v12.settings.image.label",
+      "info": "t:sections.banner_v12.settings.image.info"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:sections.banner_v12.settings.url.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "t:sections.banner_v12.settings.text1.label",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, magnam."
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "t:sections.banner_v12.settings.text2.label",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, magnam."
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "t:sections.banner_v12.settings.text3.label",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, magnam."
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v12.presets.name"
+    }
+  ]
+}
+{% endschema %}

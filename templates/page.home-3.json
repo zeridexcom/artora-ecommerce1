@@ -1,0 +1,217 @@
+{
+  "sections": {
+    "banner-v9": {
+      "type": "banner-v9",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/a67f757cbfcf4fa6a6e4d0b5a0e99d57.mp4",
+        "text1": "See creativity come to life.",
+        "url1": "shopify://collections/all",
+        "text2": "Inspiration, captured on film.",
+        "url2": "shopify://collections/all",
+        "color_scheme": "inverse",
+        "background_type": "color",
+        "background_color": "#000000",
+        "background_gradient": "",
+        "background_margin": 0,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection-v2": {
+      "type": "collection-v2",
+      "blocks": {
+        "block_j46xAH": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i01.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Frame It"
+          }
+        },
+        "block_kjj6KR": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i02.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Art Pop"
+          }
+        },
+        "block_GG43df": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i03.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Wall Vibe"
+          }
+        },
+        "block_kYbYtV": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i04.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Ink & Hue"
+          }
+        },
+        "block_BQaTTa": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i05.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Pixel Mood"
+          }
+        },
+        "block_nbh7NB": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i06.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Bold Brush"
+          }
+        },
+        "block_wy68VH": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i07.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Scene Set"
+          }
+        },
+        "block_Y93hwT": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i08.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Color Snap"
+          }
+        },
+        "block_Y93hw3T": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/h3i09.jpg",
+            "url": "shopify://collections/all",
+            "heading": "Print Pulse"
+          }
+        }
+      },
+      "block_order": ["block_j46xAH", "block_kjj6KR", "block_GG43df", "block_kYbYtV", "block_BQaTTa", "block_nbh7NB", "block_wy68VH", "block_Y93hwT", "block_Y93hw3T"],
+      "settings": {
+        "width": "fullwidth",
+        "fullwidth_margin": 0,
+        "color_scheme": "inverse",
+        "background_type": "color",
+        "background_color": "#000000",
+        "background_gradient": "",
+        "background_margin": 0,
+        "padding_top": 100,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v10": {
+      "type": "banner-v10",
+      "settings": {
+        "width": "fullwidth",
+        "fullwidth_margin": 0,
+        "body_text": "#e6e4d8",
+        "title": "Transform Your Walls into Masterpieces",
+        "desc": "cover a world where color meets creativity — and it's all on sale. From contemporary masterpieces to classic-inspired prints, our curated art collection is ready to fill your space with beauty and soul. For a limited time, enjoy exclusive discounts on original artworks, prints, and décor that speak to your style. Elevate your walls, uplift your vibe — and let art do the talking.",
+        "sub": "Unleash Creativity at Unbeatable Prices",
+        "image": "shopify://shop_images/pexels-pavel-danilyuk-6593413_1.jpg",
+        "url": "shopify://collections/all",
+        "color_scheme": "background-1",
+        "background_type": "color",
+        "background_color": "#000000",
+        "background_gradient": "",
+        "background_margin": 0,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "product_v2_TQjPR7": {
+      "type": "product-v2",
+      "blocks": {
+        "tab_pAdwaB": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Featured",
+            "tab_collection": "infinite-scrolling",
+            "tab_limit": 12
+          }
+        },
+        "tab_BYyYCn": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Trending",
+            "tab_collection": "box-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_6QGz3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Creative",
+            "tab_collection": "wide-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_XH3JhP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Whisper",
+            "tab_collection": "filter-sidebar",
+            "tab_limit": 8
+          }
+        }
+      },
+      "block_order": ["tab_pAdwaB", "tab_BYyYCn", "tab_6QGz3a", "tab_XH3JhP"],
+      "settings": {
+        "width": "wide",
+        "fullwidth_margin": 0,
+        "heading_title": "",
+        "heading_align": "center",
+        "columns_size": 4,
+        "distinct_color_scheme": true,
+        "product_card_color_scheme": "inverse",
+        "button_text": "ALL PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button_mode": "light",
+        "button_style": "secondary",
+        "button_size": "sm",
+        "button_radius": 0.8,
+        "button_padding": 1.4,
+        "color_scheme": "inverse",
+        "background_type": "color",
+        "background_color": "",
+        "background_gradient": "",
+        "use_parallax": true,
+        "background_image_animation": "none",
+        "background_video_url": "",
+        "background_video_animation": "none",
+        "background_overlay": "",
+        "background_margin": 0,
+        "padding_top": 80,
+        "padding_bottom": 50
+      }
+    },
+    "newsletter_v2_LdVQHk": {
+      "type": "newsletter-v2",
+      "settings": {
+        "title": "LIKE BEING FIRST?",
+        "subtitle": "",
+        "button_mode": "light",
+        "color_scheme": "inverse",
+        "background_type": "color",
+        "background_color": "",
+        "background_gradient": "",
+        "use_parallax": true,
+        "background_image_animation": "none",
+        "background_video_url": "",
+        "background_video_animation": "none",
+        "background_overlay": "",
+        "background_margin": 0,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": ["banner-v9", "collection-v2", "banner-v10", "product_v2_TQjPR7", "newsletter_v2_LdVQHk"]
+}

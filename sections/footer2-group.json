@@ -1,0 +1,80 @@
+{
+  "name": "t:sections.footers.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer-v2",
+      "blocks": {
+        "e837770a-0933-4a6f-83cf-89c7f87bd041": {
+          "type": "logo",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/ArtoraLogoWhite.png",
+            "image_width": 140,
+            "description": "Call us free",
+            "phone_number": "1800 68 68",
+            "address": "Address: 1234 Heaven Stress,USA.",
+            "email": "Email: info@example.com",
+            "fax": "Fax: (+100) 123 456 7890"
+          }
+        },
+        "3b5e4255-5cc5-4748-ae92-6325eeed93ba": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "info"
+          }
+        },
+        "74384f77-3e6d-4748-9f60-a884674fd2ef": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Services",
+            "menu": "services"
+          }
+        },
+        "15168e8c-874e-4ef7-9f17-2cdce5cae673": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Account",
+            "menu": "account"
+          }
+        },
+        "text_4qzhcL": {
+          "type": "text",
+          "settings": {
+            "heading": "Newsletter",
+            "subtext": "Share contact information, store details, and brand content with your customers.",
+            "newsletter_enable": true,
+            "show_social": true,
+            "item_icon1": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewbox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z \"></path></svg>",
+            "icon_link1": "shopify://collections/all",
+            "item_icon2": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\"><path d=\"M64 112c-8.8 0-16 7.2-16 16v22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1V128c0-8.8-7.2-16-16-16H64zM48 212.2V384c0 8.8 7.2 16 16 16H448c8.8 0 16-7.2 16-16V212.2L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64H448c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128z\"></path></svg>",
+            "icon_link2": "shopify://collections/all",
+            "item_icon3": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\"><path d=\"M256 8C119.3 8 8 119.3 8 256s111.3 248 248 248 248-111.3 248-248S392.7 8 256 8zm164 114.4c29.5 36 47.4 82 47.8 132-7-1.5-77-15.7-147.5-6.8-5.8-14-11.2-26.4-18.6-41.6 78.3-32 113.8-77.5 118.3-83.5zM396.4 97.9c-3.8 5.4-35.7 48.3-111 76.5-34.7-63.8-73.2-116.2-79-124 67.2-16.2 138 1.3 190.1 47.5zm-230.5-33.3c5.6 7.7 43.4 60.1 78.5 122.5-99.1 26.3-186.4 25.9-195.8 25.8C62.4 147.2 106.7 92.6 165.9 64.6zM44.2 256.3c0-2.2 0-4.3 .1-6.5 9.3 .2 111.9 1.5 217.7-30.1 6.1 11.9 11.9 23.9 17.2 35.9-76.6 21.6-146.2 83.5-180.5 142.3C64.8 360.4 44.2 310.7 44.2 256.3zm81.8 167.1c22.1-45.2 82.2-103.6 167.6-132.8 29.7 77.3 42 142.1 45.2 160.6-68.1 29-150 21.1-212.8-27.9zm248.4 8.5c-2.2-12.9-13.4-74.9-41.2-151 66.4-10.6 124.7 6.8 131.9 9.1-9.4 58.9-43.3 109.8-90.8 142z\"></path></svg>",
+            "icon_link3": "shopify://collections/all",
+            "item_icon4": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\"><path d=\"M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z\"></path></svg>",
+            "icon_link4": "shopify://collections/all"
+          }
+        }
+      },
+      "block_order": [
+        "e837770a-0933-4a6f-83cf-89c7f87bd041",
+        "3b5e4255-5cc5-4748-ae92-6325eeed93ba",
+        "74384f77-3e6d-4748-9f60-a884674fd2ef",
+        "15168e8c-874e-4ef7-9f17-2cdce5cae673",
+        "text_4qzhcL"
+      ],
+      "settings": {
+        "width": "wide",
+        "copyright": "© Copyright {{ 'now' | date: '%Y' }} | <a href='http://artora-store-newdemo.myshopify.com' rel='nofollow' target='_blank' class='footer-v2__theme-name'>Artora</a> By <a href='https://shopilaunch.com/' rel='nofollow' target='_blank' class='footer-v2__shop-name'> ShopiLaunch.</a><a href='https://shopify.pxf.io/9gPaY0' rel='nofollow' target='_blank' class='footer-v2__powered-shopify'> Powered by Shopify.</a>",
+        "image_payment": "shopify://shop_images/paymet.png",
+        "color_scheme": "inverse",
+        "background_color": "#000000",
+        "background_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": ["footer"]
+}

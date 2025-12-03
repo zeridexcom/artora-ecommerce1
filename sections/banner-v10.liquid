@@ -1,0 +1,164 @@
+
+
+<div class='banner-v10'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <xo-grid style='--xs: 1; --md: 2;' class='banner-v10__grid'>
+        <div style='--body-text: {{ section.settings.body_text }}' class='banner-v10__col banner-v10__col1'>
+          <div class='banner-10__content'>
+            <div class='banner-v10__title'>{{ section.settings.title }}</div>
+            <div class='banner-v10__desc'>{{ section.settings.desc }}</div>
+            <div class='banner-v10__sub'>{{ section.settings.sub }}</div>
+          </div>
+        </div>
+        <div class='banner-v10__col'>
+          <a href='{{ section.settings.url }}' class='banner-v10__image'>
+            {%- render 'image', image: section.settings.image -%}
+          </a>
+        </div>
+      </xo-grid>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v10.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "color",
+      "id": "body_text",
+      "label": "t:sections.banner_v10.settings.body_text.label",
+      "default": "#000000"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.banner_v10.settings.title.label",
+      "default": "Inspiration, captured on film."
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "t:sections.banner_v10.settings.desc.label",
+      "default": "Inspiration, captured on film."
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "label": "t:sections.banner_v10.settings.sub.label",
+      "default": "See creativity come to life."
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.banner_v10.settings.image.label",
+      "info": "t:sections.banner_v10.settings.image.info"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:sections.banner_v10.settings.url.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v10.presets.name"
+    }
+  ]
+}
+{% endschema %}

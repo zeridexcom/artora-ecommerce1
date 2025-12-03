@@ -1,0 +1,191 @@
+
+
+<div class='banner-v13'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <xo-grid class='banner-v13__grid'>
+        <div style='--xs: 12; --md: 12; --lg: 3;' class='banner-v13__col'>
+          <xo-grid style='--xs: 1; --sm: 2;' class='banner-v13__grid2'>
+            <div class='banner-v13-img-group__img banner-v13-img-group__img1'>
+              {%- render 'image', image: section.settings.image1 -%}
+            </div>
+            <div class='banner-v13-img-group__img banner-v13-img-group__img2'>
+              {%- render 'image', image: section.settings.image2 -%}
+            </div>
+          </xo-grid>
+        </div>
+        <div style='--xs: 12; --md: 12; --lg: 6;' class='banner-v13__col'>
+          <div class='banner-v13-content'>
+            <div class='banner-v13-content__sub'>{{ section.settings.sub }}</div>
+            <a href='{{ section.settings.url }}' class='banner-v13-content__title'>{{ section.settings.title }}</a>
+            <div class='banner-v13-content__desc'>{{ section.settings.desc }}</div>
+          </div>
+        </div>
+        <div style='--xs: 12; --md: 12; --lg: 3;' class='banner-v13__col'>
+          <xo-grid style='--xs: 1; --sm: 2;' class='banner-v13__grid2'>
+            <div class='banner-v13-img-group__img banner-v13-img-group__img3'>
+              {%- render 'image', image: section.settings.image3 -%}
+            </div>
+            <div class='banner-v13-img-group__img banner-v13-img-group__img4'>
+              {%- render 'image', image: section.settings.image4 -%}
+            </div>
+          </xo-grid>
+        </div>
+      </xo-grid>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v13.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "t:sections.banner_v13.settings.image1.label",
+      "info": "t:sections.banner_v13.settings.image1.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "t:sections.banner_v13.settings.image2.label",
+      "info": "t:sections.banner_v13.settings.image2.info"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "label": "t:sections.banner_v13.settings.sub.label",
+      "default": "Join"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.banner_v13.settings.title.label",
+      "default": "Lorem ipsum dolor"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:sections.banner_v13.settings.url.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "t:sections.banner_v13.settings.desc.label",
+      "default": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis, magnam."
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "t:sections.banner_v13.settings.image3.label",
+      "info": "t:sections.banner_v13.settings.image3.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image4",
+      "label": "t:sections.banner_v13.settings.image4.label",
+      "info": "t:sections.banner_v13.settings.image4.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v13.presets.name"
+    }
+  ]
+}
+{% endschema %}

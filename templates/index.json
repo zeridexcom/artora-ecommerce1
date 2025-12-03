@@ -1,0 +1,141 @@
+{
+  "sections": {
+    "banner-v11": {
+      "type": "banner-v11",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/692b886e2a2e40eabd84fd11227725fe.mp4",
+        "svg1": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"920\" height=\"158\" viewbox=\"0 0 920 158\" fill=\"none\">\n<path d=\"M156.422 48.2H47.6219V69.2C54.4219 69.3333 64.6219 69.4 78.2219 69.4C101.689 69.4 125.555 69 149.822 68.2V107.4C125.555 106.467 99.9552 106 73.0219 106C61.8219 106 53.3552 106.067 47.6219 106.2V156H0.421876C1.48854 130.133 2.02188 105.933 2.02188 83.4C2.02188 60.8667 1.48854 36.6667 0.421876 10.8H156.422V48.2ZM218.892 76.4C224.492 56.2667 238.426 46.2 260.692 46.2C264.559 46.2 268.292 46.4667 271.892 47L265.492 91.8C255.892 88.2 248.026 86.4 241.892 86.4C234.292 86.4 228.692 88.6667 225.092 93.2C221.492 97.7333 219.692 103.8 219.692 111.4V111.2L219.492 124.4C219.492 133.867 219.759 144.4 220.292 156H172.492C173.559 136.8 174.092 118.667 174.092 101.6C174.092 84.5333 173.559 66.2667 172.492 46.8C181.292 47.2 188.026 47.4 192.692 47.4C197.626 47.4 204.359 47.2 212.892 46.8L218.892 76.4ZM404.208 122.8C404.208 127.333 404.741 130.533 405.808 132.4C406.874 134.267 409.008 135.6 412.208 136.4L411.408 155.2C407.141 155.867 403.408 156.333 400.208 156.6C397.141 156.867 393.008 157 387.808 157C376.341 157 368.741 154.467 365.008 149.4C361.274 144.2 359.408 137.6 359.408 129.6V124.6C355.541 135.533 349.874 143.667 342.408 149C335.074 154.333 325.674 157 314.208 157C300.874 157 290.808 154.333 284.008 149C277.341 143.667 274.008 135.733 274.008 125.2C274.008 116.533 276.874 109.733 282.608 104.8C288.341 99.8667 297.208 96.4667 309.208 94.6C299.074 87.4 288.941 81.1333 278.808 75.8C286.808 65.6667 295.941 58 306.208 52.8C316.474 47.4667 328.941 44.8 343.608 44.8C364.141 44.8 379.341 49.2667 389.208 58.2C399.208 67 404.208 80.6 404.208 99V122.8ZM347.808 80C341.008 80 335.008 81.1333 329.808 83.4C324.608 85.6667 319.941 89.0667 315.808 93.6C323.808 92.6667 333.808 92.2 345.808 92.2C350.741 92.2 354.208 91.6 356.208 90.4C358.208 89.2 359.208 87.6667 359.208 85.8C359.208 84.2 358.208 82.8667 356.208 81.8C354.208 80.6 351.408 80 347.808 80ZM326.808 124.4C334.274 124.4 341.008 123 347.008 120.2C353.008 117.267 357.141 113.467 359.408 108.8V103.6C356.208 105.2 352.674 106.467 348.808 107.4C344.941 108.2 340.274 109 334.808 109.8L327.608 111C320.141 112.467 316.408 115 316.408 118.6C316.408 122.467 319.874 124.4 326.808 124.4ZM579.25 156C580.317 138.533 580.85 120.467 580.85 101.8C580.85 95.8 579.317 91.1333 576.25 87.8C573.317 84.3333 569.383 82.6 564.45 82.6C559.917 82.6 555.983 84.6 552.65 88.6C549.45 92.6 547.85 98.4 547.85 106V105.8C547.85 129.4 548.183 146.133 548.85 156H503.85C504.65 136.4 505.05 118.333 505.05 101.8C505.05 95.9333 503.583 91.2667 500.65 87.8C497.85 84.3333 494.25 82.6 489.85 82.6C485.183 82.6 481.25 84.6 478.05 88.6C474.983 92.4667 473.183 97.8 472.65 104.6C472.383 114.733 472.25 121.933 472.25 126.2C472.25 135.267 472.517 145.2 473.05 156H425.25C426.317 136.8 426.85 118.667 426.85 101.6C426.85 84.5333 426.317 66.2667 425.25 46.8C434.05 47.2 440.783 47.4 445.45 47.4C450.383 47.4 457.117 47.2 465.65 46.8L471.65 76.4C474.717 65.6 479.583 57.6667 486.25 52.6C492.917 47.4 500.583 44.8 509.25 44.8C519.65 44.8 528.117 47.6667 534.65 53.4C541.317 59.1333 545.45 66.6 547.05 75.8C550.117 66.3333 555.25 58.8 562.45 53.2C569.65 47.6 577.85 44.8 587.05 44.8C599.05 44.8 608.45 48.8667 615.25 57C622.05 65 625.45 76 625.45 90V123.2C625.45 138.267 625.583 149.2 625.85 156H579.25ZM749.581 106H684.381C685.448 111.867 688.048 116.667 692.181 120.4C696.448 124 702.448 125.8 710.181 125.8C715.781 125.8 721.048 124.733 725.981 122.6C730.915 120.333 734.848 117.2 737.781 113.2C746.715 117.6 758.581 122.333 773.381 127.4C769.248 136.733 761.715 144.2 750.781 149.8C739.981 155.267 725.848 158 708.381 158C685.715 158 668.915 152.8 657.981 142.4C647.181 131.867 641.781 118.067 641.781 101C641.781 84.3333 647.181 70.8 657.981 60.4C668.781 50 685.581 44.8 708.381 44.8C721.981 44.8 733.781 47.0667 743.781 51.6C753.781 56.1333 761.448 62.4667 766.781 70.6C772.115 78.6 774.781 87.8 774.781 98.2C774.781 101.667 774.648 104.267 774.381 106H749.581ZM711.181 75C704.515 75 699.048 76.2667 694.781 78.8C690.515 81.3333 687.515 84.8 685.781 89.2H732.981C731.381 84.9333 728.781 81.5333 725.181 79C721.581 76.3333 716.915 75 711.181 75ZM919.503 0.399989C918.703 25.2 918.303 51.1333 918.303 78.2C918.303 105 918.703 130.933 919.503 156H874.303L874.903 132C871.036 140.933 865.436 147.533 858.103 151.8C850.77 155.933 842.103 158 832.103 158C823.436 158 815.636 155.533 808.703 150.6C801.77 145.667 796.37 139 792.503 130.6C788.636 122.067 786.703 112.733 786.703 102.6C786.703 92.6 788.636 83.2 792.503 74.4C796.37 65.4667 801.77 58.3333 808.703 53C815.77 47.5333 823.77 44.8 832.703 44.8C843.103 44.8 851.97 47 859.303 51.4C866.77 55.6667 872.303 62.3333 875.903 71.4C875.903 63.8 875.636 51.6 875.103 34.8C874.57 18.5333 874.303 7.06666 874.303 0.399989H919.503ZM853.103 124.4C859.636 124.4 864.97 122.6 869.103 119C873.236 115.267 875.303 109.4 875.303 101.4C875.303 94.3333 873.236 89.1333 869.103 85.8C864.97 82.4667 859.77 80.8 853.503 80.8C847.503 80.8 842.436 82.7333 838.303 86.6C834.303 90.3333 832.303 95.2667 832.303 101.4C832.303 108.2 834.17 113.733 837.903 118C841.636 122.267 846.703 124.4 853.103 124.4Z\" fill=\"white\"></path>\n</svg>",
+        "url1": "shopify://collections/all",
+        "svg3": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"403\" height=\"148\" viewbox=\"0 0 403 148\" fill=\"none\">\n            <path d=\"M134.38 146C131.846 138.4 128.446 128.867 124.18 117.4H60.3797L50.3797 146H0.179688L56.1797 0.799998H129.78L186.18 146H134.38ZM112.78 86.2C107.713 72.2 102.513 58.2 97.1797 44.2L92.3797 31.2C87.713 43.3333 80.8464 61.6667 71.7797 86.2H112.78ZM243.252 66.4C248.852 46.2667 262.785 36.2 285.052 36.2C288.918 36.2 292.652 36.4667 296.252 37L289.852 81.8C280.252 78.2 272.385 76.4 266.252 76.4C258.652 76.4 253.052 78.6667 249.452 83.2C245.852 87.7333 244.052 93.8 244.052 101.4V101.2L243.852 114.4C243.852 123.867 244.118 134.4 244.652 146H196.852C197.918 126.8 198.452 108.667 198.452 91.6C198.452 74.5333 197.918 56.2667 196.852 36.8C205.652 37.2 212.385 37.4 217.052 37.4C221.985 37.4 228.718 37.2 237.252 36.8L243.252 66.4ZM402.881 72.6C390.615 71.8 379.415 71.2 369.281 70.8L369.081 92C369.081 99.2 370.615 104.867 373.681 109C376.881 113 382.481 115 390.481 115C393.548 115 396.481 114.733 399.281 114.2C398.748 119.133 398.481 124.133 398.481 129.2C398.481 131.6 398.615 137.067 398.881 145.6C393.015 146.667 388.081 147.333 384.081 147.6C380.081 147.867 374.881 148 368.481 148C352.881 148 341.815 144.267 335.281 136.8C328.881 129.2 325.681 118.667 325.681 105.2L325.881 71.4C319.615 71.6667 313.081 72.0667 306.281 72.6V37.2C313.215 37.2 319.081 35 323.881 30.6C328.681 26.2 331.548 20.9333 332.481 14.8H386.881C380.081 24.1333 372.548 31.6 364.281 37.2H402.881V72.6Z\" fill=\"white\"></path>\n          </svg>",
+        "url2": "shopify://collections/all",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "collection-v3": {
+      "type": "collection-v3",
+      "settings": {
+        "width": "wide",
+        "number1": "01",
+        "image1": "shopify://shop_images/h3i07.jpg",
+        "url1": "shopify://collections/all",
+        "title1": "Clean lines, bold forms.",
+        "desc1": "Discover striking simplicity with our curated selection of modern, minimal framed artwork.",
+        "number2": "02",
+        "image2": "shopify://shop_images/h3i02.jpg",
+        "url2": "shopify://collections/all",
+        "title2": "Nature, framed beautifully.",
+        "desc2": "Bring the calm and color of nature indoors with lush, botanical-inspired pieces.",
+        "number3": "03",
+        "image3": "shopify://shop_images/h3i08.jpg",
+        "url3": "shopify://collections/all",
+        "title3": "Let color and shape speak.",
+        "desc3": "A collection of expressive abstract works to ignite imagination and emotion.",
+        "number4": "04",
+        "image4": "shopify://shop_images/h3i06.jpg",
+        "url4": "shopify://collections/all",
+        "title4": "Art that never ages.",
+        "desc4": "Explore iconic, classic framed art pieces for a touch of elegance in any space.",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v12": {
+      "type": "banner-v12",
+      "settings": {
+        "width": "wide",
+        "image": "shopify://shop_images/pexels-pavel-danilyuk-6712471.jpg",
+        "url": "shopify://collections/all",
+        "text1": "Your Walls Deserve Better. Celebrate Art with Our Biggest Framing Sale of the Season!",
+        "text2": "Transform your space into a gallery of self-expression. Whether you're into bold abstracts, serene landscapes, or vintage photography, our curated collection of framed artwork is designed to elevate every wall. Hand-framed, high-quality, and ready to hang—now’s the time to bring home the pieces that speak to you.",
+        "text3": "Your walls are a blank canvas—let’s fill them with beauty. Shop our exclusive collection of professionally framed art prints at up to 40% off. From contemporary minimalism to timeless classics, we have styles to match every mood and room. Crafted with care, shipped with love—art that’s made to last and meant to be seen.",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 80,
+        "padding_bottom": 50
+      }
+    },
+    "product_v2_TQjPR7": {
+      "type": "product-v2",
+      "blocks": {
+        "tab_pAdwaB": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Featured",
+            "tab_collection": "infinite-scrolling",
+            "tab_limit": 12
+          }
+        },
+        "tab_BYyYCn": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Trending",
+            "tab_collection": "box-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_6QGz3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Creative",
+            "tab_collection": "wide-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_XH3JhP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Whisper",
+            "tab_collection": "filter-sidebar",
+            "tab_limit": 8
+          }
+        }
+      },
+      "block_order": ["tab_pAdwaB", "tab_BYyYCn", "tab_6QGz3a", "tab_XH3JhP"],
+      "settings": {
+        "width": "wide",
+        "heading_title": "",
+        "heading_align": "center",
+        "radius": 0,
+        "columns_size": 4,
+        "distinct_color_scheme": true,
+        "product_card_color_scheme": "background-1",
+        "button_text": "ALL PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button_mode": "dark",
+        "button_style": "secondary",
+        "button_size": "sm",
+        "button_radius": 0,
+        "button_padding": 1.4,
+        "color_scheme": "background-1",
+        "background_color": "",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 30,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v15": {
+      "type": "banner-v15",
+      "settings": {
+        "width": "wide",
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/fd239e8ebc6a41e083bd74ee3e699ef5.mp4",
+        "heading": "See the picture",
+        "url": "shopify://collections/all",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": ["banner-v11", "collection-v3", "banner-v12", "product_v2_TQjPR7", "banner-v15"]
+}

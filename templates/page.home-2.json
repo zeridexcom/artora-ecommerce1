@@ -1,0 +1,242 @@
+{
+  "sections": {
+    "banner-v5": {
+      "type": "banner-v5",
+      "settings": {
+        "width": "fullwidth",
+        "image": "shopify://shop_images/pexels-pixabay-219552_1.jpg",
+        "text1": "Imagination",
+        "text2": "COLOR",
+        "text3": "Creativity",
+        "url_text": "Buy Original Art",
+        "url": "shopify://collections/all",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "banner_v6": {
+      "type": "banner-v6",
+      "blocks": {
+        "banner_v106_6n7Fj4": {
+          "type": "banner-v6",
+          "settings": {
+            "image": "shopify://shop_images/02_6b2cc96c-719e-4e1d-a46a-a57aaaaaea84.jpg",
+            "title": "Where Creativity Finds Its Canvas",
+            "desc": "Step into a curated world of contemporary art that transcends trends. From bold brushstrokes to minimalist expressions, each piece tells a story — waiting to become part of yours.",
+            "button_text": "Order Now",
+            "button_link": "shopify://collections/all",
+            "button_mode": "light",
+            "button_style": "secondary",
+            "button_size": "sm",
+            "button_radius": 0,
+            "button_padding": 1.4
+          }
+        },
+        "banner_v106_aE9aiH": {
+          "type": "banner-v6",
+          "settings": {
+            "image": "shopify://shop_images/image.jpg",
+            "title": "Let Art Speak Louder Than Words",
+            "desc": "Discover an inspiring collection of artworks that stir the senses and spark imagination. Whether you're drawn to abstract wonders or serene landscapes, our gallery is a celebration of artistic voices from around the globe.",
+            "button_text": "Order Now",
+            "button_link": "shopify://collections/all",
+            "button_mode": "light",
+            "button_style": "secondary",
+            "button_size": "sm",
+            "button_radius": 0,
+            "button_padding": 1.4
+          }
+        },
+        "banner_v106_JtYgbQ": {
+          "type": "banner-v6",
+          "settings": {
+            "image": "shopify://shop_images/image_d9f9e294-663a-473f-a8bc-98358b395ec2.jpg",
+            "title": "Transform Your Space with Timeless Beauty",
+            "desc": "Explore a handpicked selection of artworks crafted by emerging and established artists. Every piece is more than décor — it's a statement of emotion, elegance, and individuality.",
+            "button_text": "Order now",
+            "button_link": "shopify://collections/all",
+            "button_mode": "light",
+            "button_style": "secondary",
+            "button_size": "sm",
+            "button_radius": 0,
+            "button_padding": 1.4
+          }
+        },
+        "banner_v106_g9cq4w": {
+          "type": "banner-v6",
+          "settings": {
+            "image": "shopify://shop_images/image_773e86f1-3eda-42ea-8e5b-dcb9e62a5c27.jpg",
+            "title": "Art That Moves the Soul, Shapes the Moment",
+            "desc": "Explore a collection where imagination knows no boundaries. From evocative portraits to daring abstractions, each work invites you to pause, feel, and connect beyond the surface.",
+            "button_text": "order now",
+            "button_link": "shopify://collections/all",
+            "button_mode": "light",
+            "button_style": "secondary",
+            "button_size": "sm",
+            "button_radius": 0,
+            "button_padding": 1.4
+          }
+        },
+        "banner_v106_MkLgea": {
+          "type": "banner-v6",
+          "settings": {
+            "image": "shopify://shop_images/image_1815f98d-7105-4390-a4c6-fe8315fd8fb0.jpg",
+            "title": "Crafted Visions for Modern Spaces",
+            "desc": "Redefine your surroundings with thoughtfully selected artwork that blends contemporary design with emotional depth. Perfect for collectors, dreamers, and all those who believe in the power of visual storytelling.",
+            "button_text": "order now",
+            "button_link": "shopify://collections/all",
+            "button_mode": "light",
+            "button_style": "secondary",
+            "button_size": "sm",
+            "button_radius": 0,
+            "button_padding": 1.4
+          }
+        }
+      },
+      "block_order": ["banner_v106_6n7Fj4", "banner_v106_aE9aiH", "banner_v106_JtYgbQ", "banner_v106_g9cq4w", "banner_v106_MkLgea"],
+      "settings": {
+        "width": "wide",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 100,
+        "padding_bottom": 50
+      }
+    },
+    "product_v2_TQjPR7": {
+      "type": "product-v2",
+      "blocks": {
+        "tab_pAdwaB": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Featured",
+            "tab_collection": "infinite-scrolling",
+            "tab_limit": 12
+          }
+        },
+        "tab_BYyYCn": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Trending",
+            "tab_collection": "box-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_6QGz3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Creative",
+            "tab_collection": "wide-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_XH3JhP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Whisper",
+            "tab_collection": "filter-sidebar",
+            "tab_limit": 8
+          }
+        }
+      },
+      "block_order": ["tab_pAdwaB", "tab_BYyYCn", "tab_6QGz3a", "tab_XH3JhP"],
+      "settings": {
+        "width": "wide",
+        "heading_title": "",
+        "heading_align": "center",
+        "radius": 0,
+        "columns_size": 4,
+        "distinct_color_scheme": true,
+        "product_card_color_scheme": "inverse",
+        "button_text": "ALL PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button_mode": "light",
+        "button_style": "secondary",
+        "button_size": "sm",
+        "button_radius": 0,
+        "button_padding": 1.4,
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "banner_v7": {
+      "type": "banner-v7",
+      "settings": {
+        "width": "fullwidth",
+        "title": "Art in Shape",
+        "desc": "iscover a curated trio of SVG-framed visuals—where design meets precision. Each piece blends organic curves and digital structure, transforming images into living art.",
+        "image1": "https://cdn.shopify.com/s/files/1/0911/6149/3876/files/art01.jpg?v=1744434896",
+        "image1_text": "Curved Perspectives",
+        "url1": "shopify://collections/all",
+        "bg_color1": "#d6cd96",
+        "image2": "https://cdn.shopify.com/s/files/1/0911/6149/3876/files/art02.jpg?v=1744434896",
+        "image2_text": "Structured Chaos",
+        "url2": "shopify://collections/all",
+        "bg_color2": "#b4982a",
+        "image3": "https://cdn.shopify.com/s/files/1/0911/6149/3876/files/art03.jpg?v=1744434896",
+        "image3_text": "Framed Abstractions",
+        "url3": "shopify://collections/all",
+        "bg_color3": "#8f4d2d",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 100,
+        "padding_bottom": 50
+      }
+    },
+    "faq_v2": {
+      "type": "faq-v2",
+      "blocks": {
+        "question_HYXyLJ": {
+          "type": "question",
+          "settings": {
+            "question": "1. What type of art do you showcase?",
+            "anwser": "<p>We feature a curated selection of contemporary and digital artworks, including illustrations, 3D art, generative graphics, mixed media, and experimental visual design. Our platform supports emerging and established artists from around the world.</p>"
+          }
+        },
+        "question_pMMW7Y": {
+          "type": "question",
+          "settings": {
+            "question": "2. How can I submit my work to be featured?",
+            "anwser": "<p>Artists can submit their portfolios through our submission page. We recommend including a selection of recent works, a short bio, and any relevant links. Our curation team reviews submissions regularly and responds within 1–2 weeks.</p>"
+          }
+        },
+        "question_4RU4NQ": {
+          "type": "question",
+          "settings": {
+            "question": "3. Do you sell original artworks or prints?",
+            "anwser": "<p>Yes, we offer both original pieces and high-quality art prints. Each item is marked accordingly. Limited editions and artist-signed prints are also available depending on the collection.</p>"
+          }
+        },
+        "question_AfkYrM": {
+          "type": "question",
+          "settings": {
+            "question": "4. Can I commission a custom piece?",
+            "anwser": "<p>Absolutely! Many of our artists are open to commissions. Please contact us with your concept, preferred style, and budget, and we’ll connect you with the right artist to bring your vision to life.</p>"
+          }
+        }
+      },
+      "block_order": ["question_HYXyLJ", "question_pMMW7Y", "question_4RU4NQ", "question_AfkYrM"],
+      "settings": {
+        "width": "wide",
+        "reverse_layout": false,
+        "faq_img": "shopify://shop_images/image_1300.jpg",
+        "sub": "Artora FAQS",
+        "heading": "Frequently Asked Questions",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 60,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": ["banner-v5", "banner_v6", "product_v2_TQjPR7", "banner_v7", "faq_v2"]
+}

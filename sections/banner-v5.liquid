@@ -1,0 +1,170 @@
+
+
+<div class='banner-v5'>
+  <div {% render 'section-attr' %}>
+    <div class='banner-v5__img'>
+      {%- render 'image', image: section.settings.image -%}
+      <xo-container {% render 'section-layout' %}>
+        <div class='banner-v5__content'>
+          <div class='banner-v5__content-inner'>
+            <div class='banner-v5__text1'>{{ section.settings.text1 }}</div>
+            <div class='banner-v5__text2'>{{ section.settings.text2 }}</div>
+            <div class='banner-v5__text3'>{{ section.settings.text3 }}</div>
+          </div>
+          <a href='{{ section.settings.url }}' class='banner-v5__url'>
+            <div class='banner-v5__url_text'>
+              {{ section.settings.url_text }}
+            </div>
+            <div class='banner-v5__icon'>
+              <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'>
+                <path d="M16.3153 16.6681C15.9247 17.0587 15.9247 17.6918 16.3153 18.0824C16.7058 18.4729 17.339 18.4729 17.7295 18.0824L22.3951 13.4168C23.1761 12.6357 23.1761 11.3694 22.3951 10.5883L17.7266 5.9199C17.3361 5.52938 16.703 5.52938 16.3124 5.91991C15.9219 6.31043 15.9219 6.9436 16.3124 7.33412L19.9785 11.0002L2 11.0002C1.44772 11.0002 1 11.4479 1 12.0002C1 12.5524 1.44772 13.0002 2 13.0002L19.9832 13.0002L16.3153 16.6681Z" />
+              </svg>
+            </div>
+          </a>
+        </div>
+      </xo-container>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v5.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.banner_v5.settings.image.label",
+      "info": "t:sections.banner_v5.settings.image.info"
+    },
+    {
+      "type": "text",
+      "id": "text1",
+      "label": "t:sections.banner_v5.settings.text1.label",
+      "default": "Where"
+    },
+    {
+      "type": "text",
+      "id": "text2",
+      "label": "t:sections.banner_v5.settings.text2.label",
+      "default": "COLOR"
+    },
+    {
+      "type": "text",
+      "id": "text3",
+      "label": "t:sections.banner_v5.settings.text3.label",
+      "default": "SPEAK"
+    },
+    {
+      "type": "text",
+      "id": "url_text",
+      "label": "t:sections.banner_v5.settings.url_text.label",
+      "default": "Buy Original Art"
+    },
+    {
+      "type": "url",
+      "id": "url",
+      "label": "t:sections.banner_v5.settings.url.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v5.presets.name"
+    }
+  ]
+}
+{% endschema %}

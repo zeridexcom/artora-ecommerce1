@@ -1,0 +1,304 @@
+
+
+<div class='banner-v7'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <div class='banner-v7__header'>
+        <div class='banner-v7__header__inner'>
+          <div class='banner-v7__title'>{{ section.settings.title }}</div>
+          <div class='banner-v7__desc'>{{ section.settings.desc }}</div>
+        </div>
+      </div>
+      <xo-grid style='--xs: 1; --md: 3;' class='banner-v7__grid'>
+        <div style='--bg-color1: {{ section.settings.bg_color1 }}' class='banner-v7__col banner-v7__col1'>
+          <a href='{{ section.settings.url1 }}' class='banner-v7__col__svg'>
+            <svg class='banner-v7__col__svg1' viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'>
+              <defs>
+                  <clipPath id="banner-v7__col__svg--elip">
+                      <ellipse cx="200" cy="150" rx="150" ry="112.5" transform="rotate(-30 200 150)" />
+                  </clipPath>
+              </defs>
+
+              {%- if section.settings.image1 != blank -%}
+                <image
+                    href="{{ section.settings.image1 }}"
+                    clip-path="url(#banner-v7__col__svg--elip)" preserveAspectRatio="xMidYMid slice" />
+                {%- else -%}
+                  <image
+                    href="https://cdn.shopify.com/s/files/1/0911/6149/3876/files/Group_31.jpg?v=1744432726"
+                    clip-path="url(#banner-v7__col__svg--elip)" preserveAspectRatio="xMidYMid slice" />
+              {%- endif -%}
+            </svg>
+            <div class='banner-v7__img_text'>
+              {{ section.settings.image1_text }}
+            </div>
+          </a>
+        </div>
+        <div style='--bg-color2: {{ section.settings.bg_color2 }}' class='banner-v7__col banner-v7__col2'>
+          <a href='{{ section.settings.url2 }}' class='banner-v7__col__svg'>
+            <svg class='banner-v7__col__svg2' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'>
+              <defs>
+                  <clipPath id="banner-v7__col__svg--rect">
+                      <path d="M 50 50
+                               C 75 75, 225 255, 250 250
+                               L 250 250
+                               C 225 275, 75 275, 50 250
+                               L 50 50
+                               Z" />
+                      <path d="M 50 50
+                           C 25 75, 25 225, 50 250
+                           L 250 250
+                           C 275 225, 275 75, 250 50
+                           L 50 50
+                           Z" />
+
+                      <path d="M 50 59
+                           C 25 25, 275 25, 250 59
+                           L 250 250
+                           C 225 275, 75 275, 50 250
+                           L 50 50
+                           Z" />
+                  </clipPath>
+              </defs>
+
+              {%- if section.settings.image2 != blank -%}
+                <image
+                    href="{{ section.settings.image2 }}"
+                    clip-path="url(#banner-v7__col__svg--rect)" preserveAspectRatio="xMidYMid slice" />
+                {%- else -%}
+                  <image
+                    href="https://cdn.shopify.com/s/files/1/0911/6149/3876/files/Group_31.jpg?v=1744432726"
+                    clip-path="url(#banner-v7__col__svg--rect)" preserveAspectRatio="xMidYMid slice" />
+              {%- endif -%}
+            </svg>
+            <div class='banner-v7__img_text'>
+              {{ section.settings.image2_text }}
+            </div>
+          </a>
+        </div>
+        <div style='--bg-color3: {{ section.settings.bg_color3 }}' class='banner-v7__col banner-v7__col3'>
+          <a href='{{ section.settings.url3 }}' class='banner-v7__col__svg'>
+            <svg class='banner-v7__col__svg3' viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'>
+              <defs>
+                  <clipPath id="banner-v7__col__svg--pill">
+                      <ellipse cx="60" cy="50" rx="50" ry="30" />
+                      <ellipse cx="150" cy="50" rx="50" ry="30" />
+                      <ellipse cx="240" cy="50" rx="50" ry="30" />
+
+                      <ellipse cx="60" cy="250" rx="50" ry="30" />
+                      <ellipse cx="150" cy="250" rx="50" ry="30" />
+                      <ellipse cx="240" cy="250" rx="50" ry="30" />
+
+                      <rect x="10" y="50" width="280" height="200" />
+                  </clipPath>
+              </defs>
+
+              {%- if section.settings.image3 != blank -%}
+                <image
+                    href="{{ section.settings.image3 }}"
+                    clip-path="url(#banner-v7__col__svg--pill)" preserveAspectRatio="xMidYMid slice" />
+                {%- else -%}
+                  <image
+                    href="https://cdn.shopify.com/s/files/1/0911/6149/3876/files/Group_31.jpg?v=1744432726"
+                    clip-path="url(#banner-v7__col__svg--pill)" preserveAspectRatio="xMidYMid slice" />
+              {%- endif -%}
+            </svg>
+            <div class='banner-v7__img_text'>
+              {{ section.settings.image3_text }}
+            </div>
+          </a>
+        </div>
+      </xo-grid>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v7.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.banner_v7.settings.title.label",
+      "default": "Title"
+    },
+    {
+      "type": "text",
+      "id": "desc",
+      "label": "t:sections.banner_v7.settings.desc.label",
+      "default": "Description"
+    },
+    {
+      "type": "text",
+      "id": "image1",
+      "label": "t:sections.banner_v7.settings.image1.label",
+      "info": "t:sections.banner_v7.settings.image1.info"
+    },
+    {
+      "type": "text",
+      "id": "image1_text",
+      "label": "t:sections.banner_v7.settings.image1_text.label",
+      "default": "text"
+    },
+    {
+      "type": "url",
+      "id": "url1",
+      "label": "t:sections.banner_v7.settings.url1.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "color",
+      "id": "bg_color1",
+      "label": "t:sections.banner_v7.settings.bg_color1.label",
+      "default": "#d6cd96"
+    },
+    {
+      "type": "text",
+      "id": "image2",
+      "label": "t:sections.banner_v7.settings.image2.label",
+      "info": "t:sections.banner_v7.settings.image2.info"
+    },
+    {
+      "type": "text",
+      "id": "image2_text",
+      "label": "t:sections.banner_v7.settings.image2_text.label",
+      "default": "text"
+    },
+    {
+      "type": "url",
+      "id": "url2",
+      "label": "t:sections.banner_v7.settings.url2.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "color",
+      "id": "bg_color2",
+      "label": "t:sections.banner_v7.settings.bg_color2.label",
+      "default": "#b4982a"
+    },
+    {
+      "type": "text",
+      "id": "image3",
+      "label": "t:sections.banner_v7.settings.image3.label",
+      "info": "t:sections.banner_v7.settings.image3.info"
+    },
+    {
+      "type": "text",
+      "id": "image3_text",
+      "label": "t:sections.banner_v7.settings.image3_text.label",
+      "default": "text"
+    },
+    {
+      "type": "url",
+      "id": "url3",
+      "label": "t:sections.banner_v7.settings.url3.label",
+      "default": "/collections/all"
+    },
+    {
+      "type": "color",
+      "id": "bg_color3",
+      "label": "t:sections.banner_v7.settings.bg_color3.label",
+      "default": "#8f4d2d"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v7.presets.name"
+    }
+  ]
+}
+{% endschema %}

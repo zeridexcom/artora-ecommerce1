@@ -1,0 +1,23 @@
+{
+  "name": "Overlay",
+  "type": "custom.overlay",
+  "sections": {
+    "cart": {
+      "type": "xo-cart-mini",
+      "settings": {}
+    },
+    "quick-view": {
+      "type": "quick-view",
+      "settings": {}
+    },
+    "popup-newsletter": {
+      "type": "popup-newsletter",
+      "settings": {}
+    },
+    "popup-promotion": {
+      "type": "popup-promotion",
+      "settings": {}
+    }
+  },
+  "order": ["cart", "popup-newsletter", "popup-promotion", "quick-view"]
+}

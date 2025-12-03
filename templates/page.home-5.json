@@ -1,0 +1,150 @@
+{
+  "sections": {
+    "banner-v13": {
+      "type": "banner-v13",
+      "settings": {
+        "width": "wide",
+        "image1": "shopify://shop_images/h3i02_f26dea04-9b10-4735-9112-d540c620bf83.jpg",
+        "image2": "shopify://shop_images/h3i05_3ebe017b-4608-428a-b05b-556a5dc02ead.jpg",
+        "sub": "Join",
+        "title": "Frame Your World",
+        "url": "shopify://collections/all",
+        "desc": "Our curated selection of framed prints, illustrations, and contemporary pieces brings color, emotion, and personality to every wall.",
+        "image3": "shopify://shop_images/h3i09_0faa7112-3a60-4be2-af11-f2a92ac5dcbc.jpg",
+        "image4": "shopify://shop_images/h3i01_674caba2-04ff-4211-b04a-5c9accb3017a.jpg",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v14": {
+      "type": "banner-v14",
+      "blocks": {
+        "block_KiWeNf": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/x01.jpg",
+            "url": "shopify://collections/art-prints",
+            "title": "Canvas Stories",
+            "desc": "Discover expressive canvas pieces that bring your walls to life."
+          }
+        },
+        "block_AkVtGt": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/y01.jpg",
+            "url": "shopify://collections/originals",
+            "title": "Bold Originals",
+            "desc": "Own unique, hand-crafted artworks made by emerging artists."
+          }
+        },
+        "block_4cTcji": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/x02.jpg",
+            "url": "shopify://collections/posters",
+            "title": "Modern Aesthetics",
+            "desc": "Elevate any room with sleek, contemporary poster designs."
+          }
+        },
+        "block_XyNMXL": {
+          "type": "block",
+          "settings": {
+            "image": "shopify://shop_images/y02.jpg",
+            "url": "shopify://collections/gallery",
+            "title": "Gallery Picks",
+            "desc": "Curated selections from our most loved and best-selling art pieces."
+          }
+        }
+      },
+      "block_order": ["block_KiWeNf", "block_AkVtGt", "block_4cTcji", "block_XyNMXL"],
+      "settings": {
+        "width": "wide",
+        "main_title": "The Art of Living",
+        "font_size": 7,
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "banner-v15": {
+      "type": "banner-v15",
+      "settings": {
+        "video_url": "https://cdn.shopify.com/videos/c/o/v/d0b4e78190cb43c58cdab8d87fe7cb7a.mp4",
+        "width": "wide",
+        "heading": "See the picture",
+        "url": "shopify://collections/all",
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "product_v2_TQjPR7": {
+      "type": "product-v2",
+      "blocks": {
+        "tab_pAdwaB": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Featured",
+            "tab_collection": "infinite-scrolling",
+            "tab_limit": 12
+          }
+        },
+        "tab_BYyYCn": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Trending",
+            "tab_collection": "box-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_6QGz3a": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Creative",
+            "tab_collection": "wide-container",
+            "tab_limit": 12
+          }
+        },
+        "tab_XH3JhP": {
+          "type": "tab",
+          "settings": {
+            "tab_title": "Whisper",
+            "tab_collection": "filter-sidebar",
+            "tab_limit": 8
+          }
+        }
+      },
+      "block_order": ["tab_pAdwaB", "tab_BYyYCn", "tab_6QGz3a", "tab_XH3JhP"],
+      "settings": {
+        "width": "wide",
+        "heading_title": "",
+        "heading_align": "center",
+        "radius": 0,
+        "columns_size": 4,
+        "distinct_color_scheme": true,
+        "product_card_color_scheme": "background-1",
+        "button_text": "ALL PRODUCTS",
+        "button_link": "shopify://collections/all",
+        "button_mode": "dark",
+        "button_style": "secondary",
+        "button_size": "sm",
+        "button_radius": 0,
+        "button_padding": 1.4,
+        "color_scheme": "background-1",
+        "background_color": "",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 30,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": ["banner-v13", "banner-v14", "banner-v15", "product_v2_TQjPR7"]
+}

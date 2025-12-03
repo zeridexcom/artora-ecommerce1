@@ -1,0 +1,66 @@
+{
+  "name": "t:sections.footers.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer-v3",
+      "blocks": {
+        "e837770a-0933-4a6f-83cf-89c7f87bd041": {
+          "type": "logo",
+          "settings": {
+            "image": "shopify://shop_images/ArtoraLogoWhite.png",
+            "info": "Our newsletter often contains special offers, discounts, and promotions.",
+            "address": "1234 Heaven Stress,USA.",
+            "phone": "1800 68 68",
+            "email": "hello@domain.com",
+            "image_width": 110
+          }
+        },
+        "3b5e4255-5cc5-4748-ae92-6325eeed93ba": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Info",
+            "menu": "info"
+          }
+        },
+        "74384f77-3e6d-4748-9f60-a884674fd2ef": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Services",
+            "menu": "services"
+          }
+        },
+        "instagram_cYLWzY": {
+          "type": "instagram",
+          "settings": {
+            "heading": "Instagram",
+            "instagram_img1": "shopify://shop_images/instagram1.jpg",
+            "link_instagram1": "#",
+            "instagram_img2": "shopify://shop_images/instagram2.jpg",
+            "link_instagram2": "#",
+            "instagram_img3": "shopify://shop_images/instagram3.jpg",
+            "link_instagram3": "#",
+            "instagram_img4": "shopify://shop_images/instagram4.jpg",
+            "link_instagram4": "#",
+            "instagram_img5": "shopify://shop_images/instagram5.jpg",
+            "link_instagram5": "#",
+            "instagram_img6": "shopify://shop_images/instagram6.jpg",
+            "link_instagram6": "#"
+          }
+        }
+      },
+      "block_order": ["e837770a-0933-4a6f-83cf-89c7f87bd041", "3b5e4255-5cc5-4748-ae92-6325eeed93ba", "74384f77-3e6d-4748-9f60-a884674fd2ef", "instagram_cYLWzY"],
+      "settings": {
+        "width": "wide",
+        "copyright": "© Copyright {{ 'now' | date: '%Y' }} | <a href='http://artora-store-newdemo.myshopify.com' rel='nofollow' target='_blank' class='footer-v21__theme-name'>Artora</a> By <a href='https://shopilaunch.com/' rel='nofollow' target='_blank' class='footer-v21__shop-name'> ShopiLaunch.</a><a href='https://shopify.pxf.io/9gPaY0' rel='nofollow' target='_blank' class='footer-v21__powered-shopify'> Powered by Shopify.</a>",
+        "image_payment": "shopify://shop_images/paymet.png",
+        "color_scheme": "inverse",
+        "background_color": "",
+        "background_gradient": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": ["footer"]
+}

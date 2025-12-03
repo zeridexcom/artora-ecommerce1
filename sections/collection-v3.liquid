@@ -1,0 +1,167 @@
+
+
+<div class='collection-v3'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <xo-grid style='--xs: 1; --md: 2; --lg: 4;' class='collection-v3__grid'>
+        {%- for block in section.blocks -%}
+          <div class='collection-v3-item'>
+            <div class='collection-v3-item__header'>{{ block.settings.number }}</div>
+            <a href='{{ block.settings.url }}' class='collection-v3-item__img'>
+              {%- render 'image', image: block.settings.image -%}
+            </a>
+            <div class='collection-v3-item-content'>
+              <div class='collection-v3-item-content__title'>{{ block.settings.heading }}</div>
+              <div class='collection-v3-item-content__desc'>{{ block.settings.bodytext }}</div>
+            </div>
+          </div>
+        {%- endfor -%}
+      </xo-grid>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.collection_v3.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "blocks": [
+    {
+      "type": "block",
+      "name": "t:sections.collection_v3.blocks.name.label",
+      "limit": 8,
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "t:sections.collection_v3.blocks.number.label",
+          "default": "01"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.collection_v3.blocks.image.label",
+          "info": "t:sections.collection_v3.blocks.image.info"
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "t:sections.collection_v3.blocks.url.label",
+          "default": "/collections/all"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "t:sections.collection_v3.blocks.heading.label",
+          "default": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "bodytext",
+          "label": "t:sections.collection_v3.blocks.bodytext.label",
+          "default": "Bodytext"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.collection_v3.presets.name"
+    }
+  ]
+}
+{% endschema %}

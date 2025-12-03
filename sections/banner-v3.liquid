@@ -1,0 +1,172 @@
+
+
+<div class='banner-v3'>
+  <div {% render 'section-attr' %}>
+    <xo-container {% render 'section-layout' %}>
+      <div class='banner-v3-header'>
+        <div class='banner-v3-header__inner'>
+          <div class='banner-v3__sub'>{{ section.settings.sub }}</div>
+          <div class='banner-v3__title'>{{ section.settings.title }}</div>
+        </div>
+      </div>
+      <div class='banner-v3-body'>
+        <xo-grid style='--xs: 1; --md: 3;' class='banner-v3-body__inner'>
+          <a href='{{section.settings.url1 }}' class='banner-v3__img1'>
+            {%- render 'image', image: section.settings.image1 -%}
+          </a>
+          <div class="banner-v3-body__center">
+            <a href='{{section.settings.url2 }}' class='banner-v3__img2'>
+              {%- render 'image', image: section.settings.image2 -%}
+            </a>
+            <div class="banner-v3-body__text">{{ section.settings.text }}</div>
+          </div>
+          <a href='{{section.settings.url3 }}' class='banner-v3__img3'>
+            {%- render 'image', image: section.settings.image3 -%}
+          </a>
+        </xo-grid>
+      </div>
+    </xo-container>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.banner_v3.name",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "label": "t:sections.banner_v3.settings.sub.label",
+      "default": "Luxury Retreats for Soul-Deep"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "t:sections.banner_v3.settings.title.label",
+      "default": "SPIRIT OF CELEBRATION"
+    },
+    {
+      "type": "image_picker",
+      "id": "image1",
+      "label": "t:sections.banner_v3.settings.image1.label",
+      "info": "t:sections.banner_v3.settings.image1.info"
+    },
+    {
+      "type": "image_picker",
+      "id": "image2",
+      "label": "t:sections.banner_v3.settings.image2.label",
+      "info": "t:sections.banner_v3.settings.image2.info"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "t:sections.banner_v3.settings.text.label",
+      "default": "Whispers of Light"
+    },
+    {
+      "type": "image_picker",
+      "id": "image3",
+      "label": "t:sections.banner_v3.settings.image3.label",
+      "info": "t:sections.banner_v3.settings.image3.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.banner_v3.presets.name"
+    }
+  ]
+}
+{% endschema %}

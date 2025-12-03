@@ -1,0 +1,161 @@
+{
+  "name": "t:sections.headers.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header-v1",
+      "settings": {
+        "width": "wide",
+        "sticky_type": "up",
+        "transparent": false,
+        "enable_topbar": false,
+        "topbar_icon_1": "<svg fill=\"#000000\" height=\"15px\" width=\"15px\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"-271 311.2 256 179.8\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path d=\"M-59.1,311.2h-167.8c0,0-44.1,0-44.1,44.1v91.5c0,0,0,44.1,44.1,44.1h167.8c0,0,44.1,0,44.1-44.1v-91.5 C-15,355.3-15,311.2-59.1,311.2z M-177.1,450.3v-98.5l83.8,49.3L-177.1,450.3z\"></path> </g></svg>",
+        "topbar_link_1": "shopify://collections/all",
+        "topbar_icon_2": "<svg width=\"15px\" height=\"15px\" viewbox=\"-5 0 20 20\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" fill=\"#000000\" xmlns:xlink=\"http://www.w3.org/1999/xlink\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <title>facebook [#176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id=\"Page-1\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"> <g id=\"Dribbble-Light-Preview\" transform=\"translate(-385.000000, -7399.000000)\" fill=\"#000000\"> <g id=\"icons\" transform=\"translate(56.000000, 160.000000)\"> <path d=\"M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z\" id=\"facebook-[#176]\"> </path> </g> </g> </g> </g></svg>",
+        "topbar_link_2": "shopify://collections/all",
+        "topbar_icon_3": "<svg fill=\"#000000\" height=\"15px\" width=\"15px\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"-271 273 256 256\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <path d=\"M-143,273c-70.7,0-128,57.3-128,128c0,52.4,31.5,97.4,76.6,117.2c-0.4-8.9-0.1-19.7,2.2-29.4c2.5-10.4,16.5-69.7,16.5-69.7 s-4.1-8.2-4.1-20.2c0-19,11-33.1,24.7-33.1c11.6,0,17.3,8.7,17.3,19.2c0,11.7-7.5,29.2-11.3,45.4c-3.2,13.6,6.8,24.6,20.2,24.6 c24.3,0,40.6-31.1,40.6-68c0-28-18.9-49-53.3-49c-38.8,0-63,28.9-63,61.3c0,11.2,3.3,19,8.4,25.1c2.4,2.8,2.7,3.9,1.8,7.1 c-0.6,2.3-2,8-2.6,10.3c-0.9,3.2-3.5,4.4-6.4,3.2c-17.9-7.3-26.2-26.9-26.2-48.9c0-36.4,30.7-80,91.5-80c48.9,0,81,35.4,81,73.3 c0,50.2-27.9,87.7-69.1,87.7c-13.8,0-26.8-7.5-31.3-15.9c0,0-7.4,29.5-9,35.2c-2.7,9.9-8,19.7-12.9,27.4c11.5,3.4,23.7,5.3,36.3,5.3 c70.7,0,128-57.3,128-128C-15,330.3-72.3,273-143,273z\"></path> </g></svg>",
+        "topbar_link_3": "shopify://collections/all",
+        "topbar_icon_4": "<svg fill=\"#000000\" version=\"1.1\" id=\"Layer_1\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"-271 283.9 256 235.1\" width=\"15px\" height=\"15px\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xml:space=\"preserve\"><g id=\"SVGRepo_bgCarrier\" stroke-width=\"0\"></g><g id=\"SVGRepo_tracerCarrier\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></g><g id=\"SVGRepo_iconCarrier\"> <g> <rect x=\"-264.4\" y=\"359.3\" width=\"49.9\" height=\"159.7\"></rect> <path d=\"M-240.5,283.9c-18.4,0-30.5,11.9-30.5,27.7c0,15.5,11.7,27.7,29.8,27.7h0.4c18.8,0,30.5-12.3,30.4-27.7 C-210.8,295.8-222.1,283.9-240.5,283.9z\"></path> <path d=\"M-78.2,357.8c-28.6,0-46.5,15.6-49.8,26.6v-25.1h-56.1c0.7,13.3,0,159.7,0,159.7h56.1v-86.3c0-4.9-0.2-9.7,1.2-13.1 c3.8-9.6,12.1-19.6,27-19.6c19.5,0,28.3,14.8,28.3,36.4V519h56.6v-88.8C-14.9,380.8-42.7,357.8-78.2,357.8z\"></path> </g> </g></svg>",
+        "topbar_link_4": "shopify://collections/all",
+        "currency_selector": true,
+        "language_selector": true,
+        "topbar_color_scheme": "",
+        "topbar_background_color": "#ffffff",
+        "topbar_background_gradient": "",
+        "logo_desktop": "shopify://shop_images/ArtoraLogoBlack.png",
+        "logo_desktop_width": 150,
+        "logo_mobile": "shopify://shop_images/ArtoraLogoBlack.png",
+        "logo_mobile_width": 100,
+        "menu": "header-menu-logo",
+        "menu_type": "default",
+        "event_type": "hover",
+        "hamburger_type": "drawer",
+        "hamburger_drawer_color_scheme": "",
+        "hamburger_drawer_background_color": "#ffffff",
+        "hamburger_drawer_background_gradient": "",
+        "submenu_color_scheme": "background-1",
+        "submenu_background_color": "#ffffff",
+        "submenu_background_gradient": "",
+        "color_scheme": "background-1",
+        "background_color": "#dbd7cc",
+        "background_gradient": ""
+      }
+    },
+    "search": {
+      "type": "search",
+      "settings": {
+        "logo_img": "shopify://shop_images/ArtoraLogoBlack.png",
+        "logo_width": 120,
+        "color_scheme": "",
+        "background_color": "",
+        "background_gradient": ""
+      }
+    },
+    "mega-menu-v1": {
+      "type": "mega-menu-v1",
+      "settings": {
+        "width": "box",
+        "index": "0",
+        "image_1": "shopify://shop_images/home1.jpg",
+        "title_1": "Home 1",
+        "link_1": "shopify://pages/home-1",
+
+        "image_2": "shopify://shop_images/home2.jpg",
+        "title_2": "Home 2",
+        "link_2": "shopify://pages/home-2",
+
+        "image_3": "shopify://shop_images/home3.jpg",
+        "title_3": "Home 3",
+        "link_3": "shopify://pages/home-3",
+
+        "image_4": "shopify://shop_images/home4.jpg",
+        "title_4": "Home 4",
+        "link_4": "shopify://pages/home-4",
+
+        "image_5": "shopify://shop_images/home5.jpg",
+        "title_5": "Home 5",
+        "link_5": "shopify://pages/home-5",
+
+        "color_scheme": "",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "mega-menu-v2": {
+      "type": "mega-menu-v2",
+      "settings": {
+        "width": "wide",
+        "index": "1",
+        "link": "",
+        "title_1": "Shop layouts",
+        "menu_1": "shop-layout",
+        "title_2": "Shop layouts",
+        "menu_2": "shop-layout-1",
+        "title_3": "Features",
+        "menu_3": "features",
+        "title_4": "Product styles",
+        "menu_4": "product-styles",
+        "title_5": "Product Card Features",
+        "menu_5": "product-card-features",
+        "color_scheme": "",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "mega-menu-v3": {
+      "type": "mega-menu-v3",
+      "settings": {
+        "width": "box",
+        "index": "2",
+        "title_1": "Product Layouts",
+        "menu_1": "product-layout",
+        "title_2": "Product Features",
+        "menu_2": "product-features",
+        "title_3": "Product Details",
+        "menu_3": "product-details",
+        "title_4": "Thumbnails Position",
+        "menu_4": "thumbnails-position",
+        "title_5": "Boost Sale",
+        "menu_5": "boost-sale",
+        "title_6": "Product Types",
+        "menu_6": "product-types",
+        "color_scheme": "",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    },
+    "mega-menu-v4": {
+      "type": "mega-menu-v4",
+      "settings": {
+        "index": "4",
+        "title_1": "Blog layout",
+        "menu_1": "blog-layout",
+        "title_2": "Post layout",
+        "menu_2": "post-layout",
+        "title_3": "Blog style",
+        "menu_3": "blog-style",
+        "title_4": "Post format",
+        "menu_4": "post-format",
+        "title_5": "Blog post",
+        "blog": "blog-grid",
+        "limit": 3,
+        "color_scheme": "",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "use_parallax": true,
+        "padding_top": 50,
+        "padding_bottom": 50
+      }
+    }
+  },
+  "order": ["header", "search", "mega-menu-v1", "mega-menu-v2", "mega-menu-v3", "mega-menu-v4"]
+}

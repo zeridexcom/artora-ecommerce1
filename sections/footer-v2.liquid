@@ -1,0 +1,495 @@
+
+
+{% comment %} Add padding bottom for toolbar mobile {% endcomment %}
+{% if template != 'product' %}
+  {% assign pb_mobile = '--pb-mobile: 53px' %}
+{% else %}
+  {% assign pb_mobile = '' %}
+{% endif %}
+
+<footer {% render 'section-attr', style: pb_mobile %}>
+  <xo-container {% render 'section-layout' %}>
+    <div class='footer-v2'>
+      {%- if section.blocks.size > 0
+        or section.settings.newsletter_enable
+        or section.settings.show_social
+        and has_social_icons == true
+        or section.settings.enable_follow_on_shop
+      -%}
+        {%- unless only_empty_brand -%}
+          <div class='footer-v2__top'>
+            <xo-grid>
+              {% for block in section.blocks %}
+                {% if block.type == 'logo' %}
+                  <div style='--xs: 12; --sm: 12; --md:8; --lg: 3'>
+                    <div class='footer-v2__block'>
+                      {%- if block.settings.heading != blank -%}
+                        <h2 class='footer-v2__heading'>{{- block.settings.heading -}}</h2>
+                      {%- endif -%}
+                      {%- case block.type -%}
+                          {% assign col = 0 %}
+                        {%- when 'logo' -%}
+                          <div class='footer-v2__logo'>
+                            <div class='footer-v2__logo-phone'>
+                              {% if block.settings.image != blank %}
+                                {%- assign image_size_2x = block.settings.image_width | times: 2 | at_most: 5760 -%}
+                                <div
+                                  class='footer-v2__logo-image'
+                                  style='max-width: min(100%, {{ block.settings.image_width }}px);'
+                                >
+                                  {% render 'image', image: block.settings.image %}
+                                </div>
+                              {% endif %}
+                              <div class='footer-v2__phone'>
+                                <h2 class='footer-v2__phone-title'>
+                                  {{ block.settings.description }}
+                                </h2>
+                                <div class='footer-v2__phone-num'>
+                                  {{ block.settings.phone_number }}
+                                </div>
+                              </div>
+                            </div>
+                            <div class='footer-v2__address'>
+                              <ul role='list'>
+                                <li>{{ block.settings.address }}</li>
+                                <li>{{ block.settings.email }}</li>
+                                <li>{{ block.settings.fax }}</li>
+                              </ul>
+                            </div>
+                          </div>
+                      {%- endcase -%}
+                    </div>
+                  </div>
+                {% elsif block.type == 'text' %}
+                  <div style='--xs: 12; --sm: 12; --md:4 ;--lg: 3'>
+                    <div class='footer-v2__block'>
+                      {%- if block.settings.heading != blank -%}
+                        <h2 class='footer-v2__heading'>{{- block.settings.heading -}}</h2>
+                      {%- endif -%}
+                      {%- case block.type -%}
+                          {% assign col = 0 %}
+                        {%- when 'text' -%}
+                          <div>
+                            <div class='footer-v2__subtext'>
+                              {{ block.settings.subtext }}
+                            </div>
+                            {%- if block.settings.newsletter_enable -%}
+                              <div class='footer-v2__block'>
+                                <xo-animate xo-cascade>
+                                  {%- form 'customer', id: 'ContactFooter' -%}
+                                    <input type='hidden' name='contact[tags]' value='newsletter'>
+                                    <div>
+                                      <div class='footer-v2__field-input'>
+                                        {% assign value = form.email %}
+                                        {% assign label = 'newsletter.label' | t %}
+                                        {% capture attr %}
+                                                aria-required='true'
+                                                autocorrect='off'
+                                                {% if form.errors %}
+                                                  autofocus
+                                                  aria-invalid='true'
+                                                  aria-describedby='ContactFooter-error'
+                                                {% elsif form.posted_successfully? %}
+                                                  aria-describedby='ContactFooter-success'
+                                                {% endif %}
+                                                required
+                                              {% endcapture %}
+                                        {% render 'field-input',
+                                          type: 'email',
+                                          name: 'contact[email]',
+                                          placeholder: 'Your email address...',
+                                          value: value,
+                                          label: label,
+                                          attr: attr
+                                        %}
+                                        <button
+                                          type='submit'
+                                          class='footer-v2__field-button'
+                                          name='commit'
+                                          id='Subscribe'
+                                          aria-label='{{ 'newsletter.button_label' | t }}'
+                                        >
+                                          <div class='footer-v2__button-email'>
+                                            {% render 'icon', class: 'footer-v2__icon-before', name: 'email', icon_size: '16', color: '#FFF' %}
+                                            {% render 'icon', class: 'footer-v2__icon-after', name: 'email', icon_size: '16', color: '#FFF' %}
+                                          </div>
+                                        </button>
+                                      </div>
+
+                                      {%- if form.errors -%}
+                                        <small class='newsletter-form__message newsletter-form__message--error' id='ContactFooter-error'>
+                                          {%- render 'icon', name: 'error' -%}
+                                          {{- form.errors.translated_fields.email | capitalize }}
+                                          {{ form.errors.messages.email -}}
+                                        </small>
+                                      {%- endif -%}
+                                      {%- if form.posted_successfully? -%}
+                                        <h3
+                                          class='newsletter-form__message newsletter-form__message--success'
+                                          id='ContactFooter-success'
+                                          tabindex='-1'
+                                          autofocus
+                                        >
+                                          {% render 'icon', name: 'success' -%}
+                                          {{- 'newsletter.success' | t }}
+                                        </h3>
+                                      {%- endif -%}
+                                    </div>
+                                  {%- endform -%}
+                                </xo-animate>
+                              </div>
+                            {%- endif -%}
+                            {%- if block.settings.show_social -%}
+                              <xo-animate xo-cascade>
+                                <ul role='list' class='footer-v2__social'>
+                                  <li>
+                                    <a href='{{block.settings.icon_link1}}' class='footer-v2__social-link' target='_blank'>{{ block.settings.item_icon1 }}</a>
+                                  </li>
+                                  <li>
+                                    <a href='{{block.settings.icon_link2}}' class='footer-v2__social-link' target='_blank'>{{ block.settings.item_icon2 }}</a>
+                                  </li>
+                                  <li>
+                                    <a href='{{block.settings.icon_link5}}' class='footer-v2__social-link' target='_blank'>{{ block.settings.item_icon3 }}</a>
+                                  </li>
+                                  <li>
+                                    <a href='{{block.settings.icon_link4}}' class='footer-v2__social-link' target='_blank'>{{ block.settings.item_icon4 }}</a>
+                                  </li>
+                                </ul>
+                              </xo-animate>
+                            {%- endif -%}
+                          </div>
+                      {%- endcase -%}
+                    </div>
+                  </div>
+                {% else %}
+                  <div style='--xs: 12; --sm: 12; --md:4 ;--lg: 2'>
+                    <div class='footer-v2__block'>
+                      {%- if block.settings.heading != blank -%}
+                        <h2 class='footer-v2__heading'>{{- block.settings.heading -}}</h2>
+                      {%- endif -%}
+                      {%- case block.type -%}
+                          {% assign col = 0 %}
+                        {%- when 'link_list' -%}
+                          {%- if block.settings.menu != blank -%}
+                            <ul role='list' class='footer-v2__list'>
+                              {%- for link in block.settings.menu.links -%}
+                                <li class='footer-v2__list-item'>
+                                  <a
+                                    href='{{ link.url }}'
+                                  >
+                                    {{ link.title }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          {%- endif -%}
+                      {%- endcase -%}
+                    </div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </xo-grid>
+          </div>
+        {%- endunless -%}
+      {%- endif -%}
+
+      <div class='footer-v2__content-bottom'>
+        <xo-grid>
+          <div class='footer-v2__copyright' style='--xs: 12; --md: 6; --lg: 6;'>
+            {% if section.settings.copyright != blank %}
+              {{- section.settings.copyright -}}
+            {% else %}
+              <small class='footer-v2__copyright-content'>&copy; Copyright {{ 'now' | date: '%Y' }} | {{ shop.name | link_to: routes.root_url -}}</small>
+              <small class='footer-v2__copyright-content'> By <a class='footer-v2__copyright-shopilaunch' href='https://shopilaunch.com/'> ShopiLaunch.</a> </small>
+              <small class='footer-v2__copyright-content footer-v2__copyright-content--black'>{{ powered_by_link }}.</small>
+            {% endif %}
+          </div>
+          <div class='footer-v2__copyright-payment' style='--xs: 12; --md: 6; --lg: 6;'>
+            {% if section.settings.image_payment != blank %}
+              {% render 'image', image: section.settings.image_payment %}
+            {% endif %}
+          </div>
+        </xo-grid>
+      </div>
+    </div>
+  </xo-container>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer_v2.name",
+  "class": "section-footer",
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer_v2.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "t:sections.footer_v2.blocks.link_list.settings.heading.label"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer_v2.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer_v2.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer_v2.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer_v2.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "text",
+          "id": "subtext",
+          "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
+          "label": "t:sections.footer_v2.blocks.text.settings.subtext.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "newsletter_enable",
+          "default": true,
+          "label": "t:sections.footer_v2.blocks.text.settings.newsletter_enable.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_social",
+          "default": true,
+          "label": "t:sections.footer_v2.blocks.text.settings.show_social.label"
+        },
+        {
+          "type": "html",
+          "id": "item_icon1",
+          "label": "t:sections.footer_v2.blocks.text.settings.item_icon1.label",
+          "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewBox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z \"/></svg>"
+        },
+        {
+          "type": "url",
+          "id": "icon_link1",
+          "label": "t:sections.footer_v2.blocks.text.settings.icon_link1.label",
+          "default": "/collections/all"
+        },
+        {
+          "type": "html",
+          "id": "item_icon2",
+          "label": "t:sections.footer_v2.blocks.text.settings.item_icon2.label",
+          "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewBox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z \"/></svg>"
+        },
+        {
+          "type": "url",
+          "id": "icon_link2",
+          "label": "t:sections.footer_v2.blocks.text.settings.icon_link2.label",
+          "default": "/collections/all"
+        },
+        {
+          "type": "html",
+          "id": "item_icon3",
+          "label": "t:sections.footer_v2.blocks.text.settings.item_icon3.label",
+          "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewBox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z \"/></svg>"
+        },
+        {
+          "type": "url",
+          "id": "icon_link3",
+          "label": "t:sections.footer_v2.blocks.text.settings.icon_link3.label",
+          "default": "/collections/all"
+        },
+        {
+          "type": "html",
+          "id": "item_icon4",
+          "label": "t:sections.footer_v2.blocks.text.settings.item_icon4.label",
+          "default": "<svg xmlns=\"http://www.w3.org/2000/svg\" height=\"1em\" viewBox=\"0 0 448 512\"><path d=\"M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z \"/></svg>"
+        },
+        {
+          "type": "url",
+          "id": "icon_link4",
+          "label": "t:sections.footer_v2.blocks.text.settings.icon_link4.label",
+          "default": "/collections/all"
+        }
+      ]
+    },
+    {
+      "type": "logo",
+      "name": "Logo",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "Support jpg, jpeg, png, svg"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 550,
+          "step": 5,
+          "unit": "px",
+          "label": "Image width",
+          "default": 80
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "default": "Call us free",
+          "label": "Description"
+        },
+        {
+          "type": "text",
+          "id": "phone_number",
+          "default": "1800 6565 222",
+          "label": "Phone number"
+        },
+        {
+          "type": "text",
+          "id": "address",
+          "default": "Address: 1234 Heaven Stress,USA.",
+          "label": "Address"
+        },
+        {
+          "type": "text",
+          "id": "email",
+          "default": "Email: info@example.com",
+          "label": "Email"
+        },
+        {
+          "type": "text",
+          "id": "fax",
+          "default": "Fax: (+100) 123 456 7890",
+          "label": "Fax"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "select",
+      "id": "width",
+      "label": "t:sections.all.width.label",
+      "default": "box",
+      "options": [
+        {
+          "value": "box",
+          "label": "t:sections.all.width.options__1.label"
+        },
+        {
+          "value": "wide",
+          "label": "t:sections.all.width.options__2.label"
+        },
+        {
+          "value": "fullwidth",
+          "label": "t:sections.all.width.options__3.label"
+        }
+      ]
+    },
+    {
+      "type": "number",
+      "id": "fullwidth_margin",
+      "label": "t:sections.all.fullwidth_margin.label",
+      "default": 0,
+      "visible_if": "{{ section.settings.width == 'fullwidth' }}"
+    },
+    {
+      "type": "liquid",
+      "id": "copyright",
+      "label": "t:sections.footer_v2.settings.copyright.label",
+      "default": " © Copyright {{ 'now' | date: '%Y' }} | <a href='http://artora-store-newdemo.myshopify.com' rel='nofollow' target='_blank' class='footer-v2__theme-name'>Artora</a> By <a href='https://shopilaunch.com/' rel='nofollow' target='_blank' class='footer-v2__shop-name'> ShopiLaunch.</a><a href='https://shopify.pxf.io/9gPaY0' rel='nofollow' target='_blank' class='footer-v2__powered-shopify'> Powered by Shopify.</a>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_payment",
+      "label": "t:sections.footer_v2.settings.image_payment.label",
+      "info": "Support jpg, jpeg, png, svg"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.heading.content"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.color_scheme.label"
+    },
+    {
+      "type": "select",
+      "id": "background_type",
+      "label": "t:sections.all.background_type.label",
+      "options": [
+        {
+          "value": "color",
+          "label": "t:sections.all.background_type.option__1.label"
+        },
+        {
+          "value": "gradient",
+          "label": "t:sections.all.background_type.option__2.label"
+        },
+        {
+          "value": "image",
+          "label": "t:sections.all.background_type.option__3.label"
+        },
+        {
+          "value": "video",
+          "label": "t:sections.all.background_type.option__4.label"
+        }
+      ],
+      "default": "color"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "t:sections.all.background_color.label",
+      "alpha": true,
+      "visible_if": "{{ section.settings.background_type == 'color' }}"
+    },
+    {
+      "type": "color_background",
+      "id": "background_gradient",
+      "label": "t:sections.all.background_gradient.label",
+      "visible_if": "{{ section.settings.background_type == 'gradient' }}"
+    },
+    {
+      "type": "number",
+      "id": "background_margin",
+      "label": "t:sections.all.background_margin.label",
+      "default": 0
+    },
+    {
+      "type": "number",
+      "id": "padding_top",
+      "label": "t:sections.all.padding_top.label",
+      "default": 50
+    },
+    {
+      "type": "number",
+      "id": "padding_bottom",
+      "label": "t:sections.all.padding_bottom.label",
+      "default": 50
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      },
+      {
+        "type": "text"
+      }
+    ]
+  }
+}
+{% endschema %}
