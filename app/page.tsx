@@ -21,30 +21,30 @@ export default function HomePage() {
                 collections={[
                     {
                         number: '01',
-                        image: '/images/collections/h3i07.jpg',
+                        image: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?w=600&h=800&fit=crop',
                         title: 'Clean lines, bold forms.',
-                        description: 'Discover striking simplicity with our curated selection of modern, minimal framed artwork.',
+                        description: 'Discover striking simplicity with our curated selection of modern, minimal wall posters.',
                         link: '/collections/modern',
                     },
                     {
                         number: '02',
-                        image: '/images/collections/h3i02.jpg',
+                        image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&h=800&fit=crop',
                         title: 'Nature, framed beautifully.',
                         description: 'Bring the calm and color of nature indoors with lush, botanical-inspired pieces.',
                         link: '/collections/nature',
                     },
                     {
                         number: '03',
-                        image: '/images/collections/h3i08.jpg',
+                        image: 'https://images.unsplash.com/photo-1541961017774-22349e4a1262?w=600&h=800&fit=crop',
                         title: 'Let color and shape speak.',
                         description: 'A collection of expressive abstract works to ignite imagination and emotion.',
                         link: '/collections/abstract',
                     },
                     {
                         number: '04',
-                        image: '/images/collections/h3i06.jpg',
+                        image: 'https://images.unsplash.com/photo-1460661419201-fd4cecdf8a8b?w=600&h=800&fit=crop',
                         title: 'Art that never ages.',
-                        description: 'Explore iconic, classic framed art pieces for a touch of elegance in any space.',
+                        description: 'Explore iconic, classic wall art pieces for a touch of elegance in any space.',
                         link: '/collections/classic',
                     },
                 ]}
@@ -52,10 +52,10 @@ export default function HomePage() {
 
             {/* Promotional Banner - Banner V12 */}
             <PromoBanner
-                image="/images/promo/pexels-pavel-danilyuk-6712471.jpg"
-                title="Your Walls Deserve Better. Celebrate Art with Our Biggest Framing Sale of the Season!"
-                subtitle="Transform your space into a gallery of self-expression. Whether you're into bold abstracts, serene landscapes, or vintage photography, our curated collection of framed artwork is designed to elevate every wall. Hand-framed, high-quality, and ready to hang—now's the time to bring home the pieces that speak to you."
-                description="Your walls are a blank canvas—let's fill them with beauty. Shop our exclusive collection of professionally framed art prints at up to 40% off. From contemporary minimalism to timeless classics, we have styles to match every mood and room. Crafted with care, shipped with love—art that's made to last and meant to be seen."
+                image="https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=1200&h=800&fit=crop"
+                title="Your Walls Deserve Better. Celebrate Art with Our Biggest Wall Poster Sale of the Season!"
+                subtitle="Transform your space into a gallery of self-expression. Whether you're into bold abstracts, serene landscapes, or vintage photography, our curated collection of wall posters is designed to elevate every wall. High-quality prints ready to hang—now's the time to bring home art that speaks to you."
+                description="Your walls are a blank canvas—let's fill them with beauty. Shop our exclusive collection of premium wall posters at up to 40% off. From contemporary minimalism to timeless classics, we have styles to match every mood and room."
                 link="/collections/sale"
             />
 

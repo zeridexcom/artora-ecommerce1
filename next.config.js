@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['cdn.shopify.com', 'res.cloudinary.com'],
+    domains: ['cdn.shopify.com', 'res.cloudinary.com', 'images.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
   },
   // Disable API routes for frontend-only deployment
