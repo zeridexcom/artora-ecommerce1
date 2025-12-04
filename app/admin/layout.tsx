@@ -38,8 +38,8 @@ export default function AdminLayout({
                 {/* Sidebar */}
                 <aside className="w-64 bg-black text-white min-h-screen p-6">
                     <div className="mb-8">
-                        <h2 className="text-2xl font-bold">Admin Panel</h2>
-                        <p className="text-sm opacity-70 mt-1">Artora Management</p>
+                        <h2 className="text-2xl font-bold">Lazywalls</h2>
+                        <p className="text-sm opacity-70 mt-1">Admin Dashboard</p>
                     </div>
 
                     <nav className="space-y-2">
@@ -48,6 +48,12 @@ export default function AdminLayout({
                             className="block px-4 py-3 rounded hover:bg-white/10 transition-colors"
                         >
                             📊 Dashboard
+                        </Link>
+                        <Link
+                            href="/admin/theme-editor"
+                            className="block px-4 py-3 rounded hover:bg-white/10 transition-colors"
+                        >
+                            🎨 Theme Editor
                         </Link>
                         <Link
                             href="/admin/products"
@@ -72,6 +78,18 @@ export default function AdminLayout({
                             className="block px-4 py-3 rounded hover:bg-white/10 transition-colors"
                         >
                             👥 Customers
+                        </Link>
+                        <Link
+                            href="/admin/analytics"
+                            className="block px-4 py-3 rounded hover:bg-white/10 transition-colors"
+                        >
+                            📈 Analytics
+                        </Link>
+                        <Link
+                            href="/admin/settings"
+                            className="block px-4 py-3 rounded hover:bg-white/10 transition-colors"
+                        >
+                            ⚙️ Settings
                         </Link>
                         <Link
                             href="/"
