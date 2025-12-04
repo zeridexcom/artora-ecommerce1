@@ -4,6 +4,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { CartProvider } from '@/context/CartContext'
 import { AuthProvider } from '@/context/AuthContext'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
     title: 'Artora - Framed Art Gallery',
@@ -30,6 +31,7 @@ export default function RootLayout({
                         </div>
                     </CartProvider>
                 </AuthProvider>
+                <SpeedInsights />
             </body>
         </html>
     )
