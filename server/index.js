@@ -41,6 +41,37 @@ app.get('/api/health', (req, res) => {
     res.json({ status: 'OK', message: 'Server is running' });
 });
 
+// Seed admin endpoint (one-time use)
+app.get('/api/seed-admin', async (req, res) => {
+    try {
+        const User = require('./models/User');
+
+        // Check if admin already exists
+        const existingAdmin = await User.findOne({ email: 'admin@lazywalls.com' });
+
+        if (existingAdmin) {
+            return res.json({ message: 'Admin user already exists', email: 'admin@lazywalls.com' });
+        }
+
+        // Create admin user
+        const admin = new User({
+            name: 'Admin',
+            email: 'admin@lazywalls.com',
+            password: 'admin123',
+            role: 'admin'
+        });
+
+        await admin.save();
+        res.json({
+            message: 'Admin user created successfully',
+            email: 'admin@lazywalls.com',
+            password: 'admin123'
+        });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
