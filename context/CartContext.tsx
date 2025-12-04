@@ -18,7 +18,7 @@ interface CartContextType {
     clearCart: () => void
 }
 
-const CartContext = createContext<CartContextContextType | undefined>(undefined)
+const CartContext = createContext<CartContextType | undefined>(undefined)
 
 export function CartProvider({ children }: { children: ReactNode }) {
     const [cart, setCart] = useState<{ items: CartItem[] } | null>(null)
