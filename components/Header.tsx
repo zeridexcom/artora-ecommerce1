@@ -64,22 +64,7 @@ export default function Header() {
                         {/* Logo */}
                         <div className="header-v7__logo">
                             <Link href="/" className="flex items-center">
-                                <Image
-                                    src="/images/ArtoraLogoWhite.png"
-                                    alt="Artora"
-                                    width={120}
-                                    height={40}
-                                    className="hidden md:block"
-                                    priority
-                                />
-                                <Image
-                                    src="/images/ArtoraLogoWhite.png"
-                                    alt="Artora"
-                                    width={100}
-                                    height={33}
-                                    className="md:hidden"
-                                    priority
-                                />
+                                <span className="text-2xl font-bold tracking-tight">Lazywalls</span>
                             </Link>
                         </div>
 
@@ -92,7 +77,7 @@ export default function Header() {
                                     </Link>
                                 </li>
                                 <li>
-                                    <Link href="/products" className="hover:opacity-70 transition-opacity">
+                                    <Link href="/shop" className="hover:opacity-70 transition-opacity">
                                         Shop
                                     </Link>
                                 </li>
@@ -177,7 +162,7 @@ export default function Header() {
                                 </Link>
                             </li>
                             <li>
-                                <Link href="/products" className="block py-2 hover:opacity-70" onClick={() => setMobileMenuOpen(false)}>
+                                <Link href="/shop" className="block py-2 hover:opacity-70" onClick={() => setMobileMenuOpen(false)}>
                                     Shop
                                 </Link>
                             </li>
