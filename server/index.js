@@ -86,6 +86,22 @@ const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
     console.log(`🚀 Server running on port ${PORT}`);
     console.log(`📡 API available at http://localhost:${PORT}/api`);
+
+    // KEEP ALIVE HACK - Ping self every 14 minutes to prevent Render free tier from sleeping
+    if (process.env.NODE_ENV === 'production' && process.env.RENDER_EXTERNAL_URL) {
+        const PING_INTERVAL = 14 * 60 * 1000; // 14 minutes
+        setInterval(async () => {
+            try {
+                const https = require('https');
+                https.get(`${process.env.RENDER_EXTERNAL_URL}/api/health`, (res) => {
+                    console.log(`🏓 Keep-alive ping: ${res.statusCode}`);
+                });
+            } catch (error) {
+                console.log('Keep-alive ping failed:', error.message);
+            }
+        }, PING_INTERVAL);
+        console.log('⏰ Keep-alive pinger started (every 14 min)');
+    }
 });
 
 module.exports = app;
